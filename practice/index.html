@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexus — AI Productivity for Teams</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            navy: { 950: '#0a0f1e', 900: '#0f172a', 800: '#1e293b', 700: '#334155' },
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .gradient-text {
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .card-glow:hover {
+      box-shadow: 0 0 0 1px rgba(59,130,246,0.3), 0 20px 40px rgba(59,130,246,0.1);
+    }
+  </style>
+</head>
+<body class="bg-[#0f172a] text-slate-100 antialiased">
+
+  <!-- NAV -->
+  <nav class="border-b border-slate-800 sticky top-0 z-50 bg-[#0f172a]/90 backdrop-blur-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-blue-500 flex items-center justify-center text-white font-bold text-sm">N</div>
+        <span class="font-bold text-lg tracking-tight">Nexus</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-sm text-slate-400">
+        <a href="#features" class="hover:text-white transition-colors">Features</a>
+        <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+        <a href="#" class="hover:text-white transition-colors">Docs</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="#" class="hidden md:block text-sm text-slate-400 hover:text-white transition-colors">Sign in</a>
+        <a href="#" class="bg-blue-500 hover:bg-blue-400 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors">Get started</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="max-w-6xl mx-auto px-6 pt-24 pb-20 text-center">
+    <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 text-sm text-blue-400 mb-8">
+      <span class="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
+      Now in public beta — free for teams up to 5
+    </div>
+    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-none mb-6">
+      Your team's brain,<br />
+      <span class="gradient-text">finally organised</span>
+    </h1>
+    <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+      Nexus connects your tools, learns your workflows, and surfaces the right information at the right time — so your team spends less time searching and more time building.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="#" class="w-full sm:w-auto bg-blue-500 hover:bg-blue-400 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors text-base">
+        Start for free →
+      </a>
+      <a href="#" class="w-full sm:w-auto text-slate-300 hover:text-white font-medium px-8 py-3.5 rounded-xl border border-slate-700 hover:border-slate-500 transition-colors text-base">
+        Watch demo
+      </a>
+    </div>
+    <p class="mt-6 text-sm text-slate-500">No credit card required · Cancel anytime</p>
+
+    <!-- Hero image placeholder -->
+    <div class="mt-16 rounded-2xl border border-slate-800 bg-slate-900/50 overflow-hidden shadow-2xl">
+      <div class="bg-slate-800/50 px-4 py-3 flex items-center gap-2 border-b border-slate-700">
+        <div class="flex gap-1.5">
+          <div class="w-3 h-3 rounded-full bg-slate-600"></div>
+          <div class="w-3 h-3 rounded-full bg-slate-600"></div>
+          <div class="w-3 h-3 rounded-full bg-slate-600"></div>
+        </div>
+        <div class="flex-1 mx-4 bg-slate-700 rounded h-5 max-w-xs"></div>
+      </div>
+      <div class="p-8 grid grid-cols-3 gap-4 min-h-[240px]">
+        <div class="col-span-2 space-y-3">
+          <div class="h-4 bg-slate-700 rounded w-3/4"></div>
+          <div class="h-4 bg-slate-700 rounded w-full"></div>
+          <div class="h-4 bg-slate-700 rounded w-2/3"></div>
+          <div class="mt-6 h-24 bg-blue-500/10 border border-blue-500/20 rounded-lg"></div>
+        </div>
+        <div class="space-y-3">
+          <div class="h-20 bg-slate-700/50 rounded-lg border border-slate-700"></div>
+          <div class="h-20 bg-slate-700/50 rounded-lg border border-slate-700"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <section class="border-y border-slate-800 py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-center text-sm text-slate-500 mb-8">Trusted by teams at</p>
+      <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
+        <span class="text-slate-500 font-semibold text-lg tracking-tight">Vercel</span>
+        <span class="text-slate-500 font-semibold text-lg tracking-tight">Linear</span>
+        <span class="text-slate-500 font-semibold text-lg tracking-tight">Stripe</span>
+        <span class="text-slate-500 font-semibold text-lg tracking-tight">Loom</span>
+        <span class="text-slate-500 font-semibold text-lg tracking-tight">Notion</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="max-w-6xl mx-auto px-6 py-24">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">Everything your team needs</h2>
+      <p class="text-slate-400 text-lg max-w-xl mx-auto">Built for the way modern teams actually work — fast, async, and across a dozen different tools.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Feature 1 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 card-glow transition-all duration-300">
+        <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-2xl mb-5">🧠</div>
+        <h3 class="font-semibold text-lg mb-2">AI Knowledge Base</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Nexus automatically ingests your Slack threads, Notion docs, and GitHub PRs — turning scattered knowledge into instant answers.</p>
+      </div>
+      <!-- Feature 2 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 card-glow transition-all duration-300">
+        <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center text-2xl mb-5">⚡</div>
+        <h3 class="font-semibold text-lg mb-2">Smart Workflows</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Automate the tedious: standup summaries, onboarding checklists, and cross-tool status updates — triggered by the work you're already doing.</p>
+      </div>
+      <!-- Feature 3 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 card-glow transition-all duration-300">
+        <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-2xl mb-5">🔌</div>
+        <h3 class="font-semibold text-lg mb-2">Connects Everything</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">50+ native integrations including Slack, GitHub, Linear, Notion, Jira, and Figma. One-click setup, no engineering required.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="bg-slate-900/50 border-y border-slate-800 py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-bold text-white mb-1">2.4×</div>
+          <div class="text-slate-400 text-sm">faster onboarding</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-white mb-1">87%</div>
+          <div class="text-slate-400 text-sm">less time searching</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-white mb-1">12k+</div>
+          <div class="text-slate-400 text-sm">teams worldwide</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-white mb-1">4.9★</div>
+          <div class="text-slate-400 text-sm">average rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="max-w-6xl mx-auto px-6 py-24">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">Simple, honest pricing</h2>
+      <p class="text-slate-400 text-lg">Start free. Upgrade when your team is ready.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+      <!-- Starter -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8">
+        <div class="text-sm font-medium text-slate-400 mb-2">Starter</div>
+        <div class="flex items-end gap-1 mb-1">
+          <span class="text-5xl font-bold">$0</span>
+        </div>
+        <p class="text-slate-500 text-sm mb-8">Free forever, up to 5 seats</p>
+        <ul class="space-y-3 mb-8 text-sm text-slate-300">
+          <li class="flex items-center gap-2"><span class="text-blue-400">✓</span> Up to 5 team members</li>
+          <li class="flex items-center gap-2"><span class="text-blue-400">✓</span> 3 integrations</li>
+          <li class="flex items-center gap-2"><span class="text-blue-400">✓</span> 30-day history</li>
+          <li class="flex items-center gap-2"><span class="text-blue-400">✓</span> Community support</li>
+        </ul>
+        <a href="#" class="block text-center border border-slate-700 hover:border-slate-500 text-slate-300 hover:text-white font-medium py-3 rounded-xl transition-colors text-sm">
+          Get started free
+        </a>
+      </div>
+      <!-- Pro (highlighted) -->
+      <div class="bg-blue-500/5 border-2 border-blue-500/50 rounded-2xl p-8 relative">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Most popular</div>
+        <div class="text-sm font-medium text-blue-400 mb-2">Pro</div>
+        <div class="flex items-end gap-1 mb-1">
+          <span class="text-5xl font-bold">$29</span>
+          <span class="text-slate-400 text-sm mb-2">/mo per team</span>
+        </div>
+        <p class="text-slate-500 text-sm mb-8">Everything you need to scale</p>
+        <ul class="space-y-3 mb-8 text-sm text-slate-300">
+          <li class="flex items-center gap-2"><span class="text-blue-400">✓</span> Unlimited members</li>
+          <li class="flex items-center gap-2"><span class="text-blue-400">✓</span> All 50+ integrations</li>
+          <li class="flex items-center gap-2"><span class="text-blue-400">✓</span> Unlimited history</li>
+          <li class="flex items-center gap-2"><span class="text-blue-400">✓</span> Priority support + SLA</li>
+          <li class="flex items-center gap-2"><span class="text-blue-400">✓</span> Custom AI workflows</li>
+        </ul>
+        <a href="#" class="block text-center bg-blue-500 hover:bg-blue-400 text-white font-semibold py-3 rounded-xl transition-colors text-sm">
+          Start 14-day free trial
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="max-w-6xl mx-auto px-6 pb-24">
+    <div class="bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-slate-700 rounded-2xl p-12 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to bring clarity to your team?</h2>
+      <p class="text-slate-400 mb-8 text-lg">Join 12,000+ teams who've replaced chaos with Nexus.</p>
+      <a href="#" class="inline-block bg-blue-500 hover:bg-blue-400 text-white font-semibold px-10 py-4 rounded-xl transition-colors text-base">
+        Get started for free →
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 py-12">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 rounded bg-blue-500 flex items-center justify-center text-white font-bold text-xs">N</div>
+        <span class="font-semibold text-sm">Nexus</span>
+        <span class="text-slate-600 text-sm ml-4">© 2026</span>
+      </div>
+      <div class="flex gap-8 text-sm text-slate-500">
+        <a href="#" class="hover:text-white transition-colors">Privacy</a>
+        <a href="#" class="hover:text-white transition-colors">Terms</a>
+        <a href="#" class="hover:text-white transition-colors">Blog</a>
+        <a href="#" class="hover:text-white transition-colors">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
