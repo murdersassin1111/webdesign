@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mesquite Manufacturing — Precision CNC Machining</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            forge: {
+              950: '#0c0a09',
+              900: '#1c1917',
+              800: '#292524',
+              700: '#44403c',
+              600: '#57534e',
+              400: '#a8a29e',
+              200: '#e7e5e4',
+              100: '#f5f5f4',
+              50:  '#fafaf9',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .hero-bg {
+      background: linear-gradient(135deg, #1c1917 0%, #292524 50%, #0c0a09 100%);
+    }
+    .orange-glow {
+      box-shadow: 0 0 30px rgba(234,88,12,0.15);
+    }
+    .service-card:hover .service-icon {
+      transform: scale(1.1);
+      transition: transform 0.2s ease;
+    }
+    .stat-item { border-right: 1px solid #e7e5e4; }
+    .stat-item:last-child { border-right: none; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.6s ease forwards; }
+  </style>
+</head>
+<body class="bg-white text-stone-900 antialiased">
+
+  <!-- NAV -->
+  <nav class="bg-stone-900 sticky top-0 z-50 border-b border-stone-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 bg-orange-600 rounded flex items-center justify-center">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div>
+          <div class="font-bold text-white text-base leading-tight">Mesquite</div>
+          <div class="text-orange-500 text-xs font-medium tracking-widest uppercase">Manufacturing</div>
+        </div>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-sm text-stone-400">
+        <a href="#services" class="hover:text-white transition-colors">Services</a>
+        <a href="#capabilities" class="hover:text-white transition-colors">Capabilities</a>
+        <a href="#about" class="hover:text-white transition-colors">About</a>
+        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+      </div>
+      <a href="#contact" class="bg-orange-600 hover:bg-orange-500 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors">
+        Get a Quote
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg text-white">
+    <div class="max-w-7xl mx-auto px-6 py-24 md:py-32">
+      <div class="max-w-3xl fade-up">
+        <div class="inline-flex items-center gap-2 border border-orange-600/40 bg-orange-600/10 text-orange-400 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-8">
+          <span class="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
+          Precision CNC Machining · Texas
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black tracking-tight leading-none mb-6">
+          Machined to<br />
+          <span class="text-orange-500">exact tolerance.</span>
+        </h1>
+        <p class="text-xl text-stone-300 leading-relaxed mb-10 max-w-2xl">
+          Fourth-axis CNC technology delivering precision components at ±0.001″ tolerances. 
+          From rapid prototypes to high-volume production — on time, on spec, every time.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#contact" class="w-full sm:w-auto text-center bg-orange-600 hover:bg-orange-500 text-white font-bold px-8 py-4 rounded-xl transition-colors text-base">
+            Request a Quote →
+          </a>
+          <a href="#services" class="w-full sm:w-auto text-center border border-stone-600 hover:border-stone-400 text-stone-300 hover:text-white font-medium px-8 py-4 rounded-xl transition-colors text-base">
+            View Services
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="border-t border-stone-800 bg-stone-900/50">
+      <div class="max-w-7xl mx-auto px-6 py-6 grid grid-cols-2 md:grid-cols-4 divide-x divide-stone-800">
+        <div class="px-6 py-2 first:pl-0">
+          <div class="text-3xl font-black text-white">±0.001<span class="text-lg text-orange-500">"</span></div>
+          <div class="text-stone-400 text-sm mt-0.5">Tolerance capability</div>
+        </div>
+        <div class="px-6 py-2">
+          <div class="text-3xl font-black text-white">4<span class="text-lg text-orange-500">-axis</span></div>
+          <div class="text-stone-400 text-sm mt-0.5">CNC technology</div>
+        </div>
+        <div class="px-6 py-2">
+          <div class="text-3xl font-black text-white">24<span class="text-lg text-orange-500">/7</span></div>
+          <div class="text-stone-400 text-sm mt-0.5">Production capacity</div>
+        </div>
+        <div class="px-6 py-2">
+          <div class="text-3xl font-black text-white">50<span class="text-lg text-orange-500">+</span></div>
+          <div class="text-stone-400 text-sm mt-0.5">Materials supported</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-24 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-14">
+        <p class="text-orange-600 font-semibold text-sm tracking-widest uppercase mb-3">What We Do</p>
+        <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-4">Full-spectrum<br />manufacturing services</h2>
+        <p class="text-stone-500 text-lg max-w-xl">From single prototypes to large-scale production runs, we handle every stage of the manufacturing process.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <!-- Precision Machining -->
+        <div class="service-card bg-white rounded-2xl border border-stone-200 p-8 hover:border-orange-300 hover:shadow-lg transition-all duration-200">
+          <div class="service-icon w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-2xl mb-6">⚙️</div>
+          <h3 class="text-xl font-bold mb-3">Precision Machining</h3>
+          <p class="text-stone-500 leading-relaxed mb-5">High-quality components with exceptional accuracy in tolerances from ±0.001″–0.005″. Advanced fourth-axis CNC for intricate designs and tight specs.</p>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-start gap-2 text-stone-600"><span class="text-orange-500 mt-0.5">▸</span> Fourth-axis CNC machining</li>
+            <li class="flex items-start gap-2 text-stone-600"><span class="text-orange-500 mt-0.5">▸</span> Metals, plastics & composites</li>
+            <li class="flex items-start gap-2 text-stone-600"><span class="text-orange-500 mt-0.5">▸</span> High-volume production at competitive cost</li>
+          </ul>
+        </div>
+
+        <!-- Prototype Development -->
+        <div class="service-card bg-white rounded-2xl border border-stone-200 p-8 hover:border-orange-300 hover:shadow-lg transition-all duration-200">
+          <div class="service-icon w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-2xl mb-6">🔬</div>
+          <h3 class="text-xl font-bold mb-3">Prototype Development</h3>
+          <p class="text-stone-500 leading-relaxed mb-5">Rapidly bring concepts to life with our fast-turn prototyping. Iterative feedback process ensures designs are validated and refined before production.</p>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-start gap-2 text-stone-600"><span class="text-orange-500 mt-0.5">▸</span> Rapid turnaround times</li>
+            <li class="flex items-start gap-2 text-stone-600"><span class="text-orange-500 mt-0.5">▸</span> Iterative design feedback loop</li>
+            <li class="flex items-start gap-2 text-stone-600"><span class="text-orange-500 mt-0.5">▸</span> Catch issues early, save cost</li>
+          </ul>
+        </div>
+
+        <!-- Custom Assembly -->
+        <div class="service-card bg-white rounded-2xl border border-stone-200 p-8 hover:border-orange-300 hover:shadow-lg transition-all duration-200">
+          <div class="service-icon w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center text-2xl mb-6">🔩</div>
+          <h3 class="text-xl font-bold mb-3">Custom Assembly</h3>
+          <p class="text-stone-500 leading-relaxed mb-5">Seamless integration of components into efficient, reliable final products. Rigorous testing at every stage guarantees performance and durability.</p>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-start gap-2 text-stone-600"><span class="text-orange-500 mt-0.5">▸</span> Full assembly & integration</li>
+            <li class="flex items-start gap-2 text-stone-600"><span class="text-orange-500 mt-0.5">▸</span> Functional & durability testing</li>
+            <li class="flex items-start gap-2 text-stone-600"><span class="text-orange-500 mt-0.5">▸</span> Tailored to your specifications</li>
+          </ul>
+        </div>
+
+        <!-- 3D Printing -->
+        <div class="service-card bg-white rounded-2xl border border-stone-200 p-8 hover:border-orange-300 hover:shadow-lg transition-all duration-200">
+          <div class="service-icon w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center text-2xl mb-6">🖨️</div>
+          <h3 class="text-xl font-bold mb-3">3D Printing</h3>
+          <p class="text-stone-500 leading-relaxed mb-5">Additive manufacturing with meticulous precision at ±0.001″–0.005″ tolerances. Traditional plastics, innovative composites, and metals — we handle it all.</p>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-start gap-2 text-stone-600"><span class="text-orange-500 mt-0.5">▸</span> Fine tolerance additive manufacturing</li>
+            <li class="flex items-start gap-2 text-stone-600"><span class="text-orange-500 mt-0.5">▸</span> Plastics, composites & metals</li>
+            <li class="flex items-start gap-2 text-stone-600"><span class="text-orange-500 mt-0.5">▸</span> Intricate geometries made possible</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="about" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-orange-600 font-semibold text-sm tracking-widest uppercase mb-3">Why Mesquite</p>
+          <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-6">Built different.<br />Engineered better.</h2>
+          <p class="text-stone-500 text-lg leading-relaxed mb-8">
+            We're an innovative CNC manufacturing company dedicated to providing top-quality solutions. Our fourth-axis technology lets us manufacture high-volume parts at lower cost than competitors — without compromising precision.
+          </p>
+          <a href="#contact" class="inline-block bg-stone-900 hover:bg-stone-700 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors">
+            Partner with us →
+          </a>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-stone-50 border border-stone-200 rounded-2xl p-6">
+            <div class="text-3xl mb-4">🏆</div>
+            <h4 class="font-bold mb-2">Expert Team</h4>
+            <p class="text-stone-500 text-sm leading-relaxed">Highly skilled professionals with deep expertise ensuring exceptional results on every project.</p>
+          </div>
+          <div class="bg-stone-50 border border-stone-200 rounded-2xl p-6">
+            <div class="text-3xl mb-4">🎯</div>
+            <h4 class="font-bold mb-2">Customised Approach</h4>
+            <p class="text-stone-500 text-sm leading-relaxed">We work closely with you to understand your goals and deliver solutions aligned to your exact vision.</p>
+          </div>
+          <div class="bg-orange-600 rounded-2xl p-6 text-white">
+            <div class="text-3xl mb-4">✅</div>
+            <h4 class="font-bold mb-2">Quality Assurance</h4>
+            <p class="text-orange-100 text-sm leading-relaxed">Stringent standards from raw material to finished component. Every part meets spec before it leaves our floor.</p>
+          </div>
+          <div class="bg-stone-50 border border-stone-200 rounded-2xl p-6">
+            <div class="text-3xl mb-4">📞</div>
+            <h4 class="font-bold mb-2">24/7 Support</h4>
+            <p class="text-stone-500 text-sm leading-relaxed">Dedicated team available around the clock for questions, updates, and after-sales assistance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES BAND -->
+  <section id="capabilities" class="bg-stone-900 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <p class="text-stone-500 text-sm font-semibold tracking-widest uppercase text-center mb-10">Material Capabilities</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="bg-stone-800 border border-stone-700 text-stone-300 text-sm font-medium px-4 py-2 rounded-full">Aluminium</span>
+        <span class="bg-stone-800 border border-stone-700 text-stone-300 text-sm font-medium px-4 py-2 rounded-full">Steel</span>
+        <span class="bg-stone-800 border border-stone-700 text-stone-300 text-sm font-medium px-4 py-2 rounded-full">Stainless Steel</span>
+        <span class="bg-stone-800 border border-stone-700 text-stone-300 text-sm font-medium px-4 py-2 rounded-full">Titanium</span>
+        <span class="bg-stone-800 border border-stone-700 text-stone-300 text-sm font-medium px-4 py-2 rounded-full">Brass</span>
+        <span class="bg-stone-800 border border-stone-700 text-stone-300 text-sm font-medium px-4 py-2 rounded-full">Copper</span>
+        <span class="bg-stone-800 border border-stone-700 text-stone-300 text-sm font-medium px-4 py-2 rounded-full">ABS Plastic</span>
+        <span class="bg-stone-800 border border-stone-700 text-stone-300 text-sm font-medium px-4 py-2 rounded-full">Nylon</span>
+        <span class="bg-stone-800 border border-stone-700 text-stone-300 text-sm font-medium px-4 py-2 rounded-full">PEEK</span>
+        <span class="bg-stone-800 border border-stone-700 text-stone-300 text-sm font-medium px-4 py-2 rounded-full">Delrin</span>
+        <span class="bg-stone-800 border border-stone-700 text-stone-300 text-sm font-medium px-4 py-2 rounded-full">Carbon Fibre</span>
+        <span class="bg-stone-800 border border-stone-700 text-stone-300 text-sm font-medium px-4 py-2 rounded-full">G10 Composite</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-2xl mx-auto text-center mb-14">
+        <p class="text-orange-600 font-semibold text-sm tracking-widest uppercase mb-3">Get in Touch</p>
+        <h2 class="text-4xl font-black tracking-tight mb-4">Request a Quote</h2>
+        <p class="text-stone-500 text-lg">Tell us about your project and we'll get back to you with a competitive quote — usually within 24 hours.</p>
+      </div>
+      <form class="max-w-2xl mx-auto bg-white border border-stone-200 rounded-2xl p-8 shadow-sm space-y-5">
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-sm font-medium text-stone-700 mb-1.5">First name</label>
+            <input type="text" placeholder="John" class="w-full border border-stone-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-stone-700 mb-1.5">Last name</label>
+            <input type="text" placeholder="Smith" class="w-full border border-stone-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-stone-700 mb-1.5">Email</label>
+          <input type="email" placeholder="john@company.com" class="w-full border border-stone-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-stone-700 mb-1.5">Service needed</label>
+          <select class="w-full border border-stone-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition text-stone-700 bg-white">
+            <option>Precision Machining</option>
+            <option>Prototype Development</option>
+            <option>Custom Assembly</option>
+            <option>3D Printing</option>
+            <option>Multiple / Not Sure</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-stone-700 mb-1.5">Project details</label>
+          <textarea rows="4" placeholder="Describe your project, materials, quantities, and timeline..." class="w-full border border-stone-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition resize-none"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-orange-600 hover:bg-orange-500 text-white font-bold py-4 rounded-xl transition-colors text-base">
+          Send Request →
+        </button>
+        <p class="text-center text-xs text-stone-400">We respond within 24 hours · No obligation · Free quote</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-stone-900 border-t border-stone-800 py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-start justify-between gap-8 mb-10">
+        <div class="max-w-xs">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-orange-600 rounded flex items-center justify-center">
+              <span class="text-white font-bold text-sm">M</span>
+            </div>
+            <span class="font-bold text-white">Mesquite Manufacturing</span>
+          </div>
+          <p class="text-stone-500 text-sm leading-relaxed">Innovative CNC manufacturing solutions. Precision, quality, and speed — delivered to your door.</p>
+        </div>
+        <div class="grid grid-cols-2 gap-x-16 gap-y-3 text-sm text-stone-400">
+          <a href="#services" class="hover:text-white transition-colors">Precision Machining</a>
+          <a href="#about" class="hover:text-white transition-colors">About Us</a>
+          <a href="#services" class="hover:text-white transition-colors">Prototyping</a>
+          <a href="#contact" class="hover:text-white transition-colors">Get a Quote</a>
+          <a href="#services" class="hover:text-white transition-colors">Custom Assembly</a>
+          <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+          <a href="#services" class="hover:text-white transition-colors">3D Printing</a>
+        </div>
+      </div>
+      <div class="border-t border-stone-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-stone-600">
+        <span>© 2026 Mesquite Manufacturing. All rights reserved.</span>
+        <span>Proudly serving our local area · 24/7 production</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Render material tags (template literal hack for Tailwind CDN)
+    document.querySelectorAll('[data-materials]').forEach(el => el.remove());
+  </script>
+
+</body>
+</html>
