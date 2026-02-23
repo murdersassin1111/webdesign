@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kindred Studio — We make brands people fall for</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            ink:   { 900:'#18181b', 800:'#27272a', 700:'#3f3f46', 600:'#52525b' },
+            coral: { 400:'#fb7185', 500:'#f43f5e', 600:'#e11d48' },
+            cream: { 50:'#fffdf9', 100:'#fef9f0', 200:'#fdf0e0' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #fffdf9; color: #18181b; }
+    .work-img { transition: transform 0.5s cubic-bezier(0.33, 1, 0.68, 1); }
+    .work-item:hover .work-img { transform: scale(1.03); }
+    .work-item { overflow: hidden; }
+    .pill { display: inline-flex; align-items: center; border-radius: 999px; }
+    .text-display { font-size: clamp(3.5rem, 9vw, 8rem); line-height: 1; font-weight: 900; letter-spacing: -0.03em; }
+    .marquee-track { display: flex; gap: 4rem; width: max-content; animation: marquee 25s linear infinite; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .service-card { transition: background 0.3s ease, color 0.3s ease; }
+    .service-card:hover { background: #18181b; color: white; }
+    .service-card:hover .service-icon { background: rgba(244,63,94,0.2); }
+    .service-card:hover .service-title { color: white; }
+    .service-card:hover .service-desc { color: rgba(255,255,255,0.6); }
+    .service-card:hover .service-num { color: rgba(255,255,255,0.2); }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-cream-50/90 backdrop-blur-lg border-b border-ink-900/5">
+    <div class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-full bg-ink-900 flex items-center justify-center">
+          <div class="w-3 h-3 rounded-full bg-coral-500"></div>
+        </div>
+        <span class="text-ink-900 font-black text-xl">Kindred Studio</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-sm text-ink-600">
+        <a href="#work"     class="hover:text-coral-500 transition-colors font-medium">Work</a>
+        <a href="#services" class="hover:text-coral-500 transition-colors font-medium">Services</a>
+        <a href="#stats"    class="hover:text-coral-500 transition-colors font-medium">About</a>
+        <a href="#contact"  class="hover:text-coral-500 transition-colors font-medium">Contact</a>
+      </div>
+      <a href="#contact" class="pill px-6 py-3 bg-ink-900 hover:bg-ink-700 text-white font-bold text-sm transition-colors">
+        Start a project
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="min-h-screen flex flex-col justify-between pt-32 pb-16 px-8 relative overflow-hidden">
+    <div class="absolute top-24 right-8 w-[400px] h-[400px] bg-coral-500/8 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto w-full flex-1 flex flex-col justify-center">
+      <p class="text-coral-500 font-semibold text-sm uppercase tracking-widest mb-8">Branding & Digital Creative Studio</p>
+      <div class="text-display text-ink-900 mb-8">
+        <div>We make brands</div>
+        <div class="flex items-center gap-6 flex-wrap">
+          <span>people</span>
+          <div class="work-item rounded-2xl overflow-hidden inline-block" style="width:160px;height:80px;vertical-align:middle;">
+            <img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=320&h=160&fit=crop&auto=format&q=80" class="work-img w-full h-full object-cover" alt="" />
+          </div>
+        </div>
+        <div class="flex items-center gap-6">
+          <span class="text-coral-500">fall for.</span>
+        </div>
+      </div>
+      <p class="text-xl text-ink-600 max-w-2xl leading-relaxed mb-12">
+        Kindred Studio is a 22-person creative agency crafting brand identities, digital experiences, and campaigns for ambitious companies — from Series A startups to global category leaders.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#work" class="pill px-8 py-4 bg-ink-900 hover:bg-coral-500 text-white font-bold transition-all hover:scale-105">
+          See our work →
+        </a>
+        <a href="#contact" class="pill px-8 py-4 border border-ink-900/20 hover:border-ink-900/40 text-ink-700 font-semibold transition-all">
+          Let's talk about your brand
+        </a>
+      </div>
+    </div>
+    <!-- Scroll hint -->
+    <div class="max-w-7xl mx-auto w-full flex items-center justify-between mt-16">
+      <div class="flex gap-4">
+        <div class="pill px-4 py-2 bg-cream-200 text-ink-600 text-xs font-semibold">Brand Identity</div>
+        <div class="pill px-4 py-2 bg-cream-200 text-ink-600 text-xs font-semibold">Digital Design</div>
+        <div class="pill px-4 py-2 bg-cream-200 text-ink-600 text-xs font-semibold">Campaigns</div>
+        <div class="pill px-4 py-2 bg-coral-500 text-white text-xs font-semibold hidden sm:inline-flex">Motion</div>
+      </div>
+      <div class="text-ink-400 text-sm hidden md:flex items-center gap-2">
+        <span>Scroll to explore</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="overflow-hidden py-5 border-y border-ink-900/10 bg-ink-900">
+    <div class="marquee-track">
+      <span class="text-cream-100/60 font-black text-sm uppercase tracking-widest">Brand Strategy</span>
+      <span class="text-coral-500">◆</span>
+      <span class="text-cream-100/60 font-black text-sm uppercase tracking-widest">Visual Identity</span>
+      <span class="text-coral-500">◆</span>
+      <span class="text-cream-100/60 font-black text-sm uppercase tracking-widest">Web Design</span>
+      <span class="text-coral-500">◆</span>
+      <span class="text-cream-100/60 font-black text-sm uppercase tracking-widest">Campaign Creative</span>
+      <span class="text-coral-500">◆</span>
+      <span class="text-cream-100/60 font-black text-sm uppercase tracking-widest">Motion Design</span>
+      <span class="text-coral-500">◆</span>
+      <span class="text-cream-100/60 font-black text-sm uppercase tracking-widest">Brand Strategy</span>
+      <span class="text-coral-500">◆</span>
+      <span class="text-cream-100/60 font-black text-sm uppercase tracking-widest">Visual Identity</span>
+      <span class="text-coral-500">◆</span>
+      <span class="text-cream-100/60 font-black text-sm uppercase tracking-widest">Web Design</span>
+      <span class="text-coral-500">◆</span>
+      <span class="text-cream-100/60 font-black text-sm uppercase tracking-widest">Campaign Creative</span>
+      <span class="text-coral-500">◆</span>
+      <span class="text-cream-100/60 font-black text-sm uppercase tracking-widest">Motion Design</span>
+      <span class="text-coral-500">◆</span>
+    </div>
+  </div>
+
+  <!-- WORK -->
+  <section id="work" class="py-32 bg-cream-50">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <h2 class="text-4xl md:text-5xl font-black text-ink-900">Selected work.</h2>
+        </div>
+        <a href="#" class="text-ink-600 font-semibold text-sm hover:text-coral-500 flex items-center gap-2 transition-colors">
+          All case studies →
+        </a>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Work 1 -->
+        <div class="work-item rounded-2xl group cursor-pointer">
+          <div class="relative" style="height: 400px;">
+            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&h=800&fit=crop&auto=format&q=80" alt="Work sample" class="work-img w-full h-full object-cover rounded-2xl" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink-900/70 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+              <div>
+                <p class="text-white font-black text-2xl mb-1">Opalwood — Brand Identity</p>
+                <p class="text-white/60 text-sm">Full rebrand for a $200M sustainable materials company</p>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 flex items-center justify-between">
+            <div>
+              <p class="text-ink-900 font-bold text-lg">Opalwood</p>
+              <p class="text-ink-500 text-sm">Brand Identity · Packaging · Campaign</p>
+            </div>
+            <div class="pill px-3 py-1.5 bg-cream-200 text-ink-600 text-xs font-bold">2025</div>
+          </div>
+        </div>
+
+        <!-- Work 2 -->
+        <div class="work-item rounded-2xl group cursor-pointer">
+          <div class="relative" style="height: 400px;">
+            <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=1200&h=800&fit=crop&auto=format&q=80" alt="Work sample" class="work-img w-full h-full object-cover rounded-2xl" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink-900/70 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+              <div>
+                <p class="text-white font-black text-2xl mb-1">Hazel Bank — Web Experience</p>
+                <p class="text-white/60 text-sm">Award-winning digital presence for a fintech challenger</p>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 flex items-center justify-between">
+            <div>
+              <p class="text-ink-900 font-bold text-lg">Hazel Bank</p>
+              <p class="text-ink-500 text-sm">Web Design · Motion · Brand System</p>
+            </div>
+            <div class="pill px-3 py-1.5 bg-coral-500 text-white text-xs font-bold">Featured</div>
+          </div>
+        </div>
+
+        <!-- Work 3 -->
+        <div class="work-item rounded-2xl group cursor-pointer">
+          <div class="relative" style="height: 320px;">
+            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=800&fit=crop&auto=format&q=80" alt="Work sample" class="work-img w-full h-full object-cover rounded-2xl" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink-900/70 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+              <div>
+                <p class="text-white font-black text-xl mb-1">Lumen Run — Campaign</p>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 flex items-center justify-between">
+            <div>
+              <p class="text-ink-900 font-bold text-lg">Lumen Run</p>
+              <p class="text-ink-500 text-sm">Launch Campaign · Social · OOH</p>
+            </div>
+            <div class="pill px-3 py-1.5 bg-cream-200 text-ink-600 text-xs font-bold">2026</div>
+          </div>
+        </div>
+
+        <!-- Work 4 -->
+        <div class="work-item rounded-2xl group cursor-pointer">
+          <div class="relative" style="height: 320px;">
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&h=800&fit=crop&auto=format&q=80" alt="Work sample" class="work-img w-full h-full object-cover rounded-2xl" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink-900/70 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+              <div>
+                <p class="text-white font-black text-xl mb-1">Cove Health — Complete Brand</p>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 flex items-center justify-between">
+            <div>
+              <p class="text-ink-900 font-bold text-lg">Cove Health</p>
+              <p class="text-ink-500 text-sm">Brand Identity · Product Design · Ads</p>
+            </div>
+            <div class="pill px-3 py-1.5 bg-cream-200 text-ink-600 text-xs font-bold">2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-32 bg-cream-100">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-black text-ink-900 mb-6">What we do.</h2>
+        <p class="text-xl text-ink-600 max-w-2xl mx-auto">We go deep on the things we're genuinely great at. No sprawling service menus — just exceptional outcomes in four core areas.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="service-card p-10 rounded-2xl bg-white border border-ink-900/5 cursor-pointer">
+          <div class="flex items-start justify-between mb-8">
+            <div class="service-icon w-14 h-14 rounded-2xl bg-coral-500/10 flex items-center justify-center transition-colors">
+              <svg class="w-7 h-7 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+            </div>
+            <span class="service-num text-ink-900/10 font-black text-5xl transition-colors">01</span>
+          </div>
+          <h3 class="service-title text-2xl font-black text-ink-900 mb-4 transition-colors">Brand Identity</h3>
+          <p class="service-desc text-ink-500 leading-relaxed transition-colors">Strategy, naming, logo systems, typography, colour, tone of voice — everything a brand needs to stand for something and be remembered. Built for longevity, not trend cycles.</p>
+        </div>
+
+        <div class="service-card p-10 rounded-2xl bg-white border border-ink-900/5 cursor-pointer">
+          <div class="flex items-start justify-between mb-8">
+            <div class="service-icon w-14 h-14 rounded-2xl bg-coral-500/10 flex items-center justify-center transition-colors">
+              <svg class="w-7 h-7 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2"/></svg>
+            </div>
+            <span class="service-num text-ink-900/10 font-black text-5xl transition-colors">02</span>
+          </div>
+          <h3 class="service-title text-2xl font-black text-ink-900 mb-4 transition-colors">Digital Design</h3>
+          <p class="service-desc text-ink-500 leading-relaxed transition-colors">Websites, landing pages, apps, and product interfaces. We obsess over craft — the kind that makes a visitor feel something before they read a word.</p>
+        </div>
+
+        <div class="service-card p-10 rounded-2xl bg-white border border-ink-900/5 cursor-pointer">
+          <div class="flex items-start justify-between mb-8">
+            <div class="service-icon w-14 h-14 rounded-2xl bg-coral-500/10 flex items-center justify-center transition-colors">
+              <svg class="w-7 h-7 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
+            </div>
+            <span class="service-num text-ink-900/10 font-black text-5xl transition-colors">03</span>
+          </div>
+          <h3 class="service-title text-2xl font-black text-ink-900 mb-4 transition-colors">Campaigns</h3>
+          <p class="service-desc text-ink-500 leading-relaxed transition-colors">Launch campaigns, rebrands, seasonal pushes. We develop the big idea and execute across every channel — social, OOH, digital, print — with the consistency that builds recall.</p>
+        </div>
+
+        <div class="service-card p-10 rounded-2xl bg-white border border-ink-900/5 cursor-pointer">
+          <div class="flex items-start justify-between mb-8">
+            <div class="service-icon w-14 h-14 rounded-2xl bg-coral-500/10 flex items-center justify-center transition-colors">
+              <svg class="w-7 h-7 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.069A1 1 0 0121 8.845v6.31a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            </div>
+            <span class="service-num text-ink-900/10 font-black text-5xl transition-colors">04</span>
+          </div>
+          <h3 class="service-title text-2xl font-black text-ink-900 mb-4 transition-colors">Motion & Content</h3>
+          <p class="service-desc text-ink-500 leading-relaxed transition-colors">Brand films, motion identity, social content, photography art direction. Brands that move — literally and emotionally — create stronger connections than static visuals alone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats" class="py-32 bg-ink-900">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="grid md:grid-cols-2 gap-20 items-center">
+        <div>
+          <h2 class="text-4xl md:text-5xl font-black text-white mb-8 leading-tight">22 people.<br/>One shared obsession<br/>with great work.</h2>
+          <p class="text-white/60 text-lg leading-relaxed mb-8">We're a deliberately small studio. Every senior designer and strategist at Kindred has been hand-picked — and they all work directly on client projects. No bait-and-switch, no farm-outs.</p>
+          <div class="grid grid-cols-2 gap-6">
+            <div>
+              <p class="text-4xl font-black text-coral-400 mb-2">140+</p>
+              <p class="text-white/50 text-sm">Brands created or refreshed</p>
+            </div>
+            <div>
+              <p class="text-4xl font-black text-coral-400 mb-2">18</p>
+              <p class="text-white/50 text-sm">Industry awards in 2025</p>
+            </div>
+            <div>
+              <p class="text-4xl font-black text-coral-400 mb-2">88%</p>
+              <p class="text-white/50 text-sm">Clients return for next project</p>
+            </div>
+            <div>
+              <p class="text-4xl font-black text-coral-400 mb-2">6yrs</p>
+              <p class="text-white/50 text-sm">Average client relationship</p>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-6">
+          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
+            <div class="flex gap-1 text-coral-400 mb-4">★★★★★</div>
+            <p class="text-white/80 italic leading-relaxed mb-5 text-sm">"Kindred didn't just give us a new logo. They fundamentally clarified who we are. Our conversion rate went up 40% after the rebrand. Investors noticed before we even told them."</p>
+            <p class="text-white font-semibold text-sm">Beatriz Alves</p>
+            <p class="text-white/40 text-xs">CEO, Opalwood</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
+            <div class="flex gap-1 text-coral-400 mb-4">★★★★★</div>
+            <p class="text-white/80 italic leading-relaxed mb-5 text-sm">"We've worked with five agencies. Kindred is the only one that felt like genuine creative partners — not just order-takers. They pushed back when they disagreed and they were right every time."</p>
+            <p class="text-white font-semibold text-sm">Tom Whitfield</p>
+            <p class="text-white/40 text-xs">CMO, Hazel Bank</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section id="contact" class="py-32 bg-coral-500">
+    <div class="max-w-4xl mx-auto px-8 text-center">
+      <h2 class="text-5xl md:text-7xl font-black text-white mb-8 leading-tight">
+        Let's make something<br/>you're proud of.
+      </h2>
+      <p class="text-2xl text-white/80 mb-12 leading-relaxed">We take on 6–8 new engagements per year. If your project is right for us, we'll tell you honestly — and if it's not, we'll point you somewhere that is.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="mailto:hello@kindred.studio" class="pill px-10 py-5 bg-ink-900 hover:bg-ink-800 text-white font-black text-lg transition-all hover:scale-105">
+          hello@kindred.studio
+        </a>
+        <a href="#" class="pill px-10 py-5 bg-white/20 hover:bg-white/30 text-white font-bold text-lg transition-all border border-white/30">
+          View case studies →
+        </a>
+      </div>
+      <p class="text-white/60 text-sm mt-8">Typically respond within 1 business day. Based in London & New York.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink-900 py-14">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-12">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-7 h-7 rounded-full bg-ink-700 flex items-center justify-center">
+              <div class="w-2.5 h-2.5 rounded-full bg-coral-500"></div>
+            </div>
+            <span class="text-white font-black text-lg">Kindred Studio</span>
+          </div>
+          <p class="text-white/40 text-sm max-w-xs leading-relaxed">We make brands people fall for. London & New York.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-x-16 gap-y-8">
+          <div>
+            <p class="text-white font-semibold text-sm mb-4">Work</p>
+            <ul class="space-y-3 text-white/40 text-sm">
+              <li><a href="#" class="hover:text-coral-400 transition-colors">Case Studies</a></li>
+              <li><a href="#" class="hover:text-coral-400 transition-colors">Brand Identity</a></li>
+              <li><a href="#" class="hover:text-coral-400 transition-colors">Digital Design</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-white font-semibold text-sm mb-4">Studio</p>
+            <ul class="space-y-3 text-white/40 text-sm">
+              <li><a href="#" class="hover:text-coral-400 transition-colors">About us</a></li>
+              <li><a href="#" class="hover:text-coral-400 transition-colors">Careers</a></li>
+              <li><a href="#" class="hover:text-coral-400 transition-colors">Journal</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-white font-semibold text-sm mb-4">Follow</p>
+            <ul class="space-y-3 text-white/40 text-sm">
+              <li><a href="#" class="hover:text-coral-400 transition-colors">Instagram</a></li>
+              <li><a href="#" class="hover:text-coral-400 transition-colors">Twitter / X</a></li>
+              <li><a href="#" class="hover:text-coral-400 transition-colors">Dribbble</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-white/30 text-sm">© 2026 Kindred Studio Ltd. Registered in England & Wales.</p>
+        <div class="flex gap-6 text-white/30 text-sm">
+          <a href="#" class="hover:text-white transition-colors">Privacy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

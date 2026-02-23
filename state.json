@@ -1,5 +1,5 @@
 {
-  "run": 4,
+  "run": 5,
   "used_themes": [
     "Food Delivery App",
     "B2B Logistics Platform",
@@ -12,9 +12,36 @@
     "Electric Vehicle Startup",
     "Fintech Banking App",
     "Sustainable Architecture",
-    "Esports Team"
+    "Esports Team",
+    "Remote Work Tools SaaS",
+    "Luxury Real Estate",
+    "Creative Agency"
   ],
   "generated": [
+    {
+      "run": 5,
+      "date": "2026-02-23",
+      "entries": [
+        {
+          "industry": "Remote Work Tools SaaS",
+          "company": "Woven",
+          "palette": "Indigo / White / Slate",
+          "file": "run005-1-remote-work-tools-saas-20260223.html"
+        },
+        {
+          "industry": "Luxury Real Estate",
+          "company": "Aurum Estates",
+          "palette": "Charcoal / Gold / Cream",
+          "file": "run005-2-luxury-real-estate-20260223.html"
+        },
+        {
+          "industry": "Creative Agency",
+          "company": "Kindred Studio",
+          "palette": "Off-Black / Coral / Cream",
+          "file": "run005-3-creative-agency-20260223.html"
+        }
+      ]
+    },
     {
       "run": 4,
       "date": "2026-02-23",

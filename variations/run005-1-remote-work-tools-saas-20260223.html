@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Woven — The operating system for remote teams</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            indigo: { 50:'#eef2ff', 100:'#e0e7ff', 400:'#818cf8', 500:'#6366f1', 600:'#4f46e5', 700:'#4338ca' },
+            slate:  { 50:'#f8fafc', 100:'#f1f5f9', 200:'#e2e8f0', 400:'#94a3b8', 600:'#475569', 700:'#334155', 900:'#0f172a' },
+            warm:   { 50:'#fafaf9', 100:'#f5f5f4', 200:'#e7e5e4' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .hero-gradient { background: linear-gradient(160deg, #eef2ff 0%, #f8fafc 50%, #e0e7ff 100%); }
+    .card-float { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card-float:hover { transform: translateY(-6px); box-shadow: 0 24px 48px rgba(99,102,241,0.12); }
+    .badge { display: inline-flex; align-items: center; gap: 6px; }
+    .avatar-stack img { border: 2px solid white; margin-left: -8px; }
+    .avatar-stack img:first-child { margin-left: 0; }
+  </style>
+</head>
+<body class="antialiased bg-white text-slate-900">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-lg border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-xl bg-indigo-500 flex items-center justify-center">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h10M4 18h7"/>
+          </svg>
+        </div>
+        <span class="text-slate-900 font-bold text-xl">Woven</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-sm text-slate-500">
+        <a href="#features" class="hover:text-indigo-600 transition-colors">Features</a>
+        <a href="#stats"    class="hover:text-indigo-600 transition-colors">Customers</a>
+        <a href="#pricing"  class="hover:text-indigo-600 transition-colors">Pricing</a>
+        <a href="#"         class="hover:text-indigo-600 transition-colors">Changelog</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="text-sm text-slate-500 hover:text-slate-900 transition-colors hidden md:block">Log in</a>
+        <a href="#pricing" class="px-5 py-2.5 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold text-sm rounded-xl transition-all hover:scale-105 shadow-lg shadow-indigo-500/20">
+          Start for free
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-gradient pt-32 pb-24 overflow-hidden relative">
+    <div class="absolute -top-32 -right-32 w-[500px] h-[500px] bg-indigo-400/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="text-center max-w-4xl mx-auto">
+        <div class="badge px-4 py-2 rounded-full bg-indigo-100 text-indigo-700 text-sm font-semibold mb-8 mx-auto">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          New: AI meeting summaries now available
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black text-slate-900 leading-tight tracking-tight mb-6">
+          Your remote team,<br/>finally <span class="text-indigo-500">in sync</span>.
+        </h1>
+        <p class="text-xl text-slate-500 leading-relaxed max-w-2xl mx-auto mb-10">
+          Woven replaces your scattered stack of Slack, Notion, Loom, and Jira with one async-first workspace. Less noise. More output. Zero timezone anxiety.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <a href="#" class="px-8 py-4 bg-indigo-500 hover:bg-indigo-600 text-white font-bold rounded-xl transition-all hover:scale-105 shadow-xl shadow-indigo-500/25">
+            Start free — no credit card
+          </a>
+          <a href="#features" class="px-8 py-4 bg-white hover:bg-slate-50 text-slate-700 font-semibold rounded-xl border border-slate-200 hover:border-slate-300 transition-all flex items-center justify-center gap-2">
+            <svg class="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            See 90-second demo
+          </a>
+        </div>
+        <!-- Social proof -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-slate-500">
+          <div class="flex items-center gap-2">
+            <div class="avatar-stack flex">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&auto=format&q=80" class="w-8 h-8 rounded-full object-cover" alt="" />
+              <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=40&h=40&fit=crop&auto=format&q=80" class="w-8 h-8 rounded-full object-cover" alt="" />
+              <img src="https://images.unsplash.com/photo-1562408590-e32931084e23?w=40&h=40&fit=crop&auto=format&q=80" class="w-8 h-8 rounded-full object-cover" alt="" />
+              <div class="w-8 h-8 rounded-full bg-indigo-500 flex items-center justify-center text-white text-xs font-bold border-2 border-white ml-[-8px]">+</div>
+            </div>
+            <span><strong class="text-slate-900">28,000+</strong> teams already using Woven</span>
+          </div>
+          <span class="hidden sm:block text-slate-300">|</span>
+          <div class="flex items-center gap-1">
+            <span class="text-amber-400">★★★★★</span>
+            <span><strong class="text-slate-900">4.9</strong> on G2 (1,800 reviews)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard mockup -->
+      <div class="mt-20 max-w-5xl mx-auto">
+        <div class="rounded-2xl border border-slate-200 bg-white shadow-2xl overflow-hidden">
+          <div class="bg-slate-50 border-b border-slate-100 px-5 py-3 flex items-center gap-3">
+            <div class="flex gap-1.5">
+              <div class="w-3 h-3 rounded-full bg-red-400/60"></div>
+              <div class="w-3 h-3 rounded-full bg-amber-400/60"></div>
+              <div class="w-3 h-3 rounded-full bg-green-400/60"></div>
+            </div>
+            <div class="flex-1 flex justify-center">
+              <div class="bg-white border border-slate-200 rounded-lg px-4 py-1.5 text-xs text-slate-400 w-64 text-center">app.woven.io/workspace/acme-corp</div>
+            </div>
+          </div>
+          <div class="flex" style="min-height:380px;">
+            <!-- Sidebar -->
+            <div class="w-56 bg-slate-900 p-4 flex-shrink-0 hidden md:flex flex-col gap-1">
+              <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-indigo-500/20 border border-indigo-500/30 mb-4">
+                <div class="w-6 h-6 rounded-md bg-indigo-500 flex items-center justify-center">
+                  <span class="text-white text-xs font-bold">A</span>
+                </div>
+                <span class="text-white text-sm font-semibold">Acme Corp</span>
+              </div>
+              <p class="text-slate-500 text-xs uppercase tracking-wider px-3 mb-1">Spaces</p>
+              <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 text-white text-sm"><span>📋</span> Product</div>
+              <div class="flex items-center gap-2 px-3 py-2 rounded-lg text-slate-400 text-sm hover:bg-white/5"><span>🎯</span> Marketing</div>
+              <div class="flex items-center gap-2 px-3 py-2 rounded-lg text-slate-400 text-sm hover:bg-white/5"><span>💡</span> Design</div>
+              <div class="flex items-center gap-2 px-3 py-2 rounded-lg text-slate-400 text-sm hover:bg-white/5"><span>⚙️</span> Engineering</div>
+              <div class="mt-auto pt-4 border-t border-white/10 flex items-center gap-2 px-2">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&auto=format&q=80" class="w-7 h-7 rounded-full object-cover" alt="" />
+                <span class="text-slate-300 text-xs">Alex Johnson</span>
+              </div>
+            </div>
+            <!-- Main content -->
+            <div class="flex-1 p-6 bg-white">
+              <div class="flex items-center justify-between mb-6">
+                <h3 class="text-slate-900 font-bold text-lg">Product Sprint · Week 8</h3>
+                <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">On track</span>
+              </div>
+              <div class="space-y-3">
+                <div class="flex items-center gap-4 p-3 rounded-xl border border-slate-100 hover:bg-slate-50">
+                  <div class="w-5 h-5 rounded-full border-2 border-indigo-500 flex items-center justify-center flex-shrink-0">
+                    <div class="w-2.5 h-2.5 rounded-full bg-indigo-500"></div>
+                  </div>
+                  <span class="flex-1 text-slate-700 text-sm">Redesign onboarding flow — 3 screens remaining</span>
+                  <span class="text-slate-400 text-xs">Due tomorrow</span>
+                </div>
+                <div class="flex items-center gap-4 p-3 rounded-xl border border-slate-100">
+                  <div class="w-5 h-5 rounded-full border-2 border-green-500 bg-green-500 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <span class="flex-1 text-slate-400 text-sm line-through">API rate limiting — shipped to production</span>
+                  <span class="text-green-500 text-xs font-medium">Done ✓</span>
+                </div>
+                <div class="flex items-center gap-4 p-3 rounded-xl border border-slate-100 hover:bg-slate-50">
+                  <div class="w-5 h-5 rounded-full border-2 border-slate-300 flex-shrink-0"></div>
+                  <span class="flex-1 text-slate-700 text-sm">Write Q2 launch press release</span>
+                  <span class="text-slate-400 text-xs">Sarah K.</span>
+                </div>
+                <div class="flex items-center gap-4 p-3 rounded-xl border border-amber-100 bg-amber-50">
+                  <div class="w-5 h-5 rounded-full border-2 border-amber-400 flex-shrink-0"></div>
+                  <span class="flex-1 text-slate-700 text-sm">Performance audit — needs review</span>
+                  <span class="text-amber-600 text-xs font-medium">⚠ Blocked</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-20">
+        <p class="text-indigo-500 font-semibold text-sm uppercase tracking-widest mb-4">Features</p>
+        <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-6">Everything your remote team needs.<br/>Nothing it doesn't.</h2>
+        <p class="text-xl text-slate-500 max-w-2xl mx-auto">Woven combines async updates, project management, docs, and video into one calm, focused workspace.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <div class="card-float p-8 rounded-2xl bg-slate-50 border border-slate-100">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Async Standup</h3>
+          <p class="text-slate-500 leading-relaxed">Team members post short video or text updates on their own schedule. Woven compiles them into a digest that takes 3 minutes to skim — not 45 to watch.</p>
+        </div>
+
+        <div class="card-float p-8 rounded-2xl bg-slate-50 border border-slate-100">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Smart Projects</h3>
+          <p class="text-slate-500 leading-relaxed">Kanban, list, or timeline — your choice. AI automatically creates tasks from meeting notes, assigns them based on team workload, and surfaces blockers before they become problems.</p>
+        </div>
+
+        <div class="card-float p-8 rounded-2xl bg-slate-50 border border-slate-100">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Meeting Intelligence</h3>
+          <p class="text-slate-500 leading-relaxed">Record any call and Woven's AI writes the summary, extracts decisions, and creates follow-up tasks automatically. Your meetings earn their place on the calendar.</p>
+        </div>
+
+        <div class="card-float p-8 rounded-2xl bg-slate-50 border border-slate-100">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Team Visibility</h3>
+          <p class="text-slate-500 leading-relaxed">See what everyone's working on without micromanaging. Real-time workload view lets managers spot over-allocation and under-utilisation across every time zone.</p>
+        </div>
+
+        <div class="card-float p-8 rounded-2xl bg-slate-50 border border-slate-100">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Connected Wiki</h3>
+          <p class="text-slate-500 leading-relaxed">Docs that actually stay up to date. Pages auto-link to related tasks and decisions. Ask Woven AI any question about your company and it finds the answer from your own knowledge base.</p>
+        </div>
+
+        <div class="card-float p-8 rounded-2xl bg-indigo-500 border border-indigo-600">
+          <div class="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">250+ Integrations</h3>
+          <p class="text-indigo-200 leading-relaxed">Slack, GitHub, Figma, Salesforce, Linear — Woven pulls in context from wherever your work lives. One feed. Zero tab-switching.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats" class="py-32 bg-slate-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-black text-white mb-6">The results speak for themselves.</h2>
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto">Teams that switch to Woven report dramatic improvements in how much they get done — and how they feel about work.</p>
+      </div>
+      <div class="grid md:grid-cols-4 gap-8 mb-20">
+        <div class="text-center">
+          <p class="text-5xl font-black text-indigo-400 mb-3">62%</p>
+          <p class="text-slate-400">Fewer meetings per week<br/>(reported by 80% of teams)</p>
+        </div>
+        <div class="text-center">
+          <p class="text-5xl font-black text-indigo-400 mb-3">3.1h</p>
+          <p class="text-slate-400">Average time saved per person,<br/>per week</p>
+        </div>
+        <div class="text-center">
+          <p class="text-5xl font-black text-indigo-400 mb-3">28K+</p>
+          <p class="text-slate-400">Teams across<br/>120 countries</p>
+        </div>
+        <div class="text-center">
+          <p class="text-5xl font-black text-indigo-400 mb-3">97%</p>
+          <p class="text-slate-400">Annual retention<br/>rate in 2025</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-2xl border border-white/10 bg-white/5">
+          <div class="flex gap-1 text-amber-400 mb-4">★★★★★</div>
+          <p class="text-slate-300 italic leading-relaxed mb-6 text-sm">"We cancelled Slack, Notion, and Loom within 3 months of adopting Woven. One tool, half the cost, and our team actually knows what everyone's doing."</p>
+          <p class="text-white font-semibold text-sm">Cam Morrison</p>
+          <p class="text-slate-400 text-xs">Head of Engineering, Relay Health</p>
+        </div>
+        <div class="p-8 rounded-2xl border border-white/10 bg-white/5">
+          <div class="flex gap-1 text-amber-400 mb-4">★★★★★</div>
+          <p class="text-slate-300 italic leading-relaxed mb-6 text-sm">"Our team is across 7 time zones. Before Woven, async was a nightmare. Now we have genuine visibility without anyone having to be online at weird hours."</p>
+          <p class="text-white font-semibold text-sm">Amara Osei</p>
+          <p class="text-slate-400 text-xs">CEO, Stackboard</p>
+        </div>
+        <div class="p-8 rounded-2xl border border-white/10 bg-white/5">
+          <div class="flex gap-1 text-amber-400 mb-4">★★★★★</div>
+          <p class="text-slate-300 italic leading-relaxed mb-6 text-sm">"The AI meeting summaries alone saved us 4 hours a week in note-taking. The task extraction is frighteningly accurate. It's like having an EA for the whole team."</p>
+          <p class="text-white font-semibold text-sm">Lena Schmidt</p>
+          <p class="text-slate-400 text-xs">VP Product, NordCloud</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="py-32 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-20">
+        <p class="text-indigo-500 font-semibold text-sm uppercase tracking-widest mb-4">Pricing</p>
+        <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-6">Start free. Scale when you're ready.</h2>
+        <p class="text-xl text-slate-500 max-w-2xl mx-auto">No per-seat surprises. Generous free plan. Upgrade when your team grows.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="p-8 rounded-2xl bg-white border border-slate-200 card-float">
+          <p class="text-slate-600 font-semibold mb-2">Free</p>
+          <p class="text-4xl font-black text-slate-900 mb-1">$0<span class="text-base font-normal text-slate-400">/mo</span></p>
+          <p class="text-slate-400 text-sm mb-8">Up to 10 team members</p>
+          <ul class="space-y-3 text-slate-600 text-sm mb-8">
+            <li class="flex gap-3"><svg class="w-4 h-4 text-indigo-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Unlimited projects & tasks</li>
+            <li class="flex gap-3"><svg class="w-4 h-4 text-indigo-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Async standups</li>
+            <li class="flex gap-3"><svg class="w-4 h-4 text-indigo-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>5 integrations</li>
+            <li class="flex gap-3"><svg class="w-4 h-4 text-indigo-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>5GB storage</li>
+          </ul>
+          <a href="#" class="block text-center py-3 border border-slate-200 hover:border-indigo-300 text-slate-700 font-semibold rounded-xl transition-colors">Get started free</a>
+        </div>
+        <div class="p-8 rounded-2xl bg-indigo-500 card-float relative">
+          <span class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-slate-900 text-white text-xs font-bold rounded-full">Most popular</span>
+          <p class="text-indigo-200 font-semibold mb-2">Team</p>
+          <p class="text-4xl font-black text-white mb-1">$12<span class="text-base font-normal text-indigo-200">/seat/mo</span></p>
+          <p class="text-indigo-200 text-sm mb-8">Unlimited members</p>
+          <ul class="space-y-3 text-indigo-100 text-sm mb-8">
+            <li class="flex gap-3"><svg class="w-4 h-4 text-indigo-200 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Everything in Free</li>
+            <li class="flex gap-3"><svg class="w-4 h-4 text-indigo-200 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>AI meeting summaries</li>
+            <li class="flex gap-3"><svg class="w-4 h-4 text-indigo-200 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>250+ integrations</li>
+            <li class="flex gap-3"><svg class="w-4 h-4 text-indigo-200 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Unlimited storage</li>
+          </ul>
+          <a href="#" class="block text-center py-3 bg-white hover:bg-indigo-50 text-indigo-600 font-bold rounded-xl transition-colors">Start 14-day trial</a>
+        </div>
+        <div class="p-8 rounded-2xl bg-white border border-slate-200 card-float">
+          <p class="text-slate-600 font-semibold mb-2">Enterprise</p>
+          <p class="text-4xl font-black text-slate-900 mb-1">Custom</p>
+          <p class="text-slate-400 text-sm mb-8">For teams of 200+</p>
+          <ul class="space-y-3 text-slate-600 text-sm mb-8">
+            <li class="flex gap-3"><svg class="w-4 h-4 text-indigo-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Everything in Team</li>
+            <li class="flex gap-3"><svg class="w-4 h-4 text-indigo-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>SSO + SCIM provisioning</li>
+            <li class="flex gap-3"><svg class="w-4 h-4 text-indigo-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Dedicated success manager</li>
+            <li class="flex gap-3"><svg class="w-4 h-4 text-indigo-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>SLA + compliance docs</li>
+          </ul>
+          <a href="#" class="block text-center py-3 border border-slate-200 hover:border-indigo-300 text-slate-700 font-semibold rounded-xl transition-colors">Talk to sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <div class="flex items-center gap-2.5 mb-4">
+            <div class="w-7 h-7 rounded-lg bg-indigo-500 flex items-center justify-center">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h10M4 18h7"/></svg>
+            </div>
+            <span class="text-white font-bold text-lg">Woven</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed">The async-first workspace for remote teams. Built to replace your entire productivity stack.</p>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4">Product</p>
+          <ul class="space-y-3 text-slate-400 text-sm">
+            <li><a href="#" class="hover:text-indigo-400 transition-colors">Features</a></li>
+            <li><a href="#" class="hover:text-indigo-400 transition-colors">Integrations</a></li>
+            <li><a href="#" class="hover:text-indigo-400 transition-colors">Pricing</a></li>
+            <li><a href="#" class="hover:text-indigo-400 transition-colors">Changelog</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4">Compare</p>
+          <ul class="space-y-3 text-slate-400 text-sm">
+            <li><a href="#" class="hover:text-indigo-400 transition-colors">vs. Slack</a></li>
+            <li><a href="#" class="hover:text-indigo-400 transition-colors">vs. Notion</a></li>
+            <li><a href="#" class="hover:text-indigo-400 transition-colors">vs. Asana</a></li>
+            <li><a href="#" class="hover:text-indigo-400 transition-colors">vs. Linear</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4">Company</p>
+          <ul class="space-y-3 text-slate-400 text-sm">
+            <li><a href="#" class="hover:text-indigo-400 transition-colors">About</a></li>
+            <li><a href="#" class="hover:text-indigo-400 transition-colors">Blog</a></li>
+            <li><a href="#" class="hover:text-indigo-400 transition-colors">Careers</a></li>
+            <li><a href="#" class="hover:text-indigo-400 transition-colors">Security</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-slate-400 text-sm">© 2026 Woven Technologies Inc. All rights reserved.</p>
+        <div class="flex gap-6 text-slate-400 text-sm">
+          <a href="#" class="hover:text-white transition-colors">Privacy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms</a>
+          <a href="#" class="hover:text-white transition-colors">Status</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

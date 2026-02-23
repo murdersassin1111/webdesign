@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurum Estates — Ultra-prime residential brokerage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            charcoal: { 900:'#1a1a1a', 800:'#242424', 700:'#2e2e2e', 600:'#3a3a3a' },
+            gold:     { 300:'#f5e6b4', 400:'#e8c96b', 500:'#d4a72c', 600:'#b08a1e' },
+            cream:    { 50:'#fdfcf8', 100:'#faf7ef', 200:'#f2ecdc' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #fdfcf8; color: #1a1a1a; }
+    .nav-scrolled { background: rgba(253,252,248,0.95); }
+    .hero-text-shadow { text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+    .property-card img { transition: transform 0.6s ease; }
+    .property-card:hover img { transform: scale(1.04); }
+    .property-card { overflow: hidden; }
+    .gold-line { width: 40px; height: 2px; background: #d4a72c; }
+    .letter-spacing-luxury { letter-spacing: 0.25em; }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 nav-scrolled backdrop-blur-lg border-b border-gold-500/10">
+    <div class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
+      <div class="flex flex-col">
+        <span class="text-charcoal-900 font-black text-lg tracking-widest uppercase">AURUM</span>
+        <div class="gold-line"></div>
+        <span class="text-gold-500 text-xs letter-spacing-luxury uppercase font-medium">Estates</span>
+      </div>
+      <div class="hidden md:flex items-center gap-10 text-xs letter-spacing-luxury uppercase font-semibold text-charcoal-600">
+        <a href="#listings" class="hover:text-gold-500 transition-colors">Listings</a>
+        <a href="#services" class="hover:text-gold-500 transition-colors">Services</a>
+        <a href="#stats"    class="hover:text-gold-500 transition-colors">About</a>
+        <a href="#contact"  class="hover:text-gold-500 transition-colors">Contact</a>
+      </div>
+      <a href="#contact" class="px-6 py-3 border border-charcoal-900 hover:bg-charcoal-900 hover:text-white text-charcoal-900 font-semibold text-xs letter-spacing-luxury uppercase transition-colors">
+        Private Enquiry
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-end">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=1200&h=800&fit=crop&auto=format&q=80"
+        alt="Luxury property"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/40 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-8 pb-24 pt-48 w-full">
+      <div class="max-w-3xl">
+        <p class="text-gold-400 letter-spacing-luxury uppercase text-xs font-semibold mb-6">Ultra-Prime Residential</p>
+        <h1 class="text-6xl md:text-8xl font-black text-white leading-none tracking-tight mb-8 hero-text-shadow">
+          Homes that<br/>define a city's<br/><span class="text-gold-400">finest hour.</span>
+        </h1>
+        <p class="text-xl text-white/70 max-w-xl leading-relaxed mb-10">
+          Aurum Estates represents the world's most significant residential properties — penthouse residences, historic estates, and architectural landmarks across 14 global markets.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#listings" class="px-8 py-4 bg-gold-500 hover:bg-gold-400 text-charcoal-900 font-bold uppercase tracking-wider text-sm transition-all hover:scale-105">
+            View current listings
+          </a>
+          <a href="#contact" class="px-8 py-4 border border-white/40 hover:border-white text-white font-semibold uppercase tracking-wider text-sm transition-all">
+            Speak with an advisor
+          </a>
+        </div>
+      </div>
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 right-8 hidden md:flex flex-col items-center gap-3">
+        <div class="w-px h-16 bg-gradient-to-b from-white/0 to-white/40"></div>
+        <p class="text-white/40 text-xs letter-spacing-luxury uppercase rotate-90 origin-center translate-y-6">Scroll</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE STRIP -->
+  <div class="bg-charcoal-900 py-4 overflow-hidden">
+    <div class="flex gap-12 items-center text-gold-500 text-xs font-semibold letter-spacing-luxury uppercase whitespace-nowrap animate-pulse">
+      <span>New York</span><span class="text-gold-700">◆</span>
+      <span>London</span><span class="text-gold-700">◆</span>
+      <span>Monaco</span><span class="text-gold-700">◆</span>
+      <span>Dubai</span><span class="text-gold-700">◆</span>
+      <span>Sydney</span><span class="text-gold-700">◆</span>
+      <span>Paris</span><span class="text-gold-700">◆</span>
+      <span>Singapore</span><span class="text-gold-700">◆</span>
+      <span>Los Angeles</span><span class="text-gold-700">◆</span>
+      <span>Geneva</span><span class="text-gold-700">◆</span>
+      <span>Hong Kong</span><span class="text-gold-700">◆</span>
+      <span>Miami</span><span class="text-gold-700">◆</span>
+      <span>Zurich</span><span class="text-gold-700">◆</span>
+      <span>Tokyo</span><span class="text-gold-700">◆</span>
+      <span>Toronto</span>
+    </div>
+  </div>
+
+  <!-- LISTINGS -->
+  <section id="listings" class="py-32 bg-cream-50">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <p class="text-gold-500 letter-spacing-luxury uppercase text-xs font-semibold mb-3">Selected Residences</p>
+          <h2 class="text-4xl md:text-5xl font-black text-charcoal-900 leading-tight">Current Listings</h2>
+        </div>
+        <a href="#" class="text-charcoal-600 text-sm font-semibold hover:text-gold-500 flex items-center gap-2 uppercase letter-spacing-luxury transition-colors">
+          View all properties
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Property 1 -->
+        <div class="property-card rounded-xl overflow-hidden group cursor-pointer">
+          <div class="relative" style="height:320px;">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&h=800&fit=crop&auto=format&q=80" alt="Luxury property" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-900/70 via-transparent to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 bg-gold-500 text-charcoal-900 text-xs font-bold uppercase tracking-wider">New Listing</span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <p class="text-white font-black text-xl mb-1">One Billionaires' Row, PH72</p>
+              <p class="text-white/60 text-sm">Manhattan, New York</p>
+            </div>
+          </div>
+          <div class="p-6 bg-white border-x border-b border-cream-200">
+            <div class="flex justify-between items-start mb-4">
+              <p class="text-3xl font-black text-charcoal-900">$42.5M</p>
+              <span class="px-3 py-1 border border-gold-400/40 text-gold-600 text-xs font-semibold rounded-full uppercase tracking-wider">Exclusive</span>
+            </div>
+            <div class="flex gap-6 text-sm text-charcoal-600">
+              <span>7 bed</span>
+              <span>8.5 bath</span>
+              <span>12,400 sq ft</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Property 2 -->
+        <div class="property-card rounded-xl overflow-hidden group cursor-pointer">
+          <div class="relative" style="height:320px;">
+            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&h=800&fit=crop&auto=format&q=80" alt="Luxury property" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-900/70 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <p class="text-white font-black text-xl mb-1">Villa Serenova</p>
+              <p class="text-white/60 text-sm">Cap Ferrat, French Riviera</p>
+            </div>
+          </div>
+          <div class="p-6 bg-white border-x border-b border-cream-200">
+            <div class="flex justify-between items-start mb-4">
+              <p class="text-3xl font-black text-charcoal-900">€78M</p>
+              <span class="px-3 py-1 border border-gold-400/40 text-gold-600 text-xs font-semibold rounded-full uppercase tracking-wider">Off-Market</span>
+            </div>
+            <div class="flex gap-6 text-sm text-charcoal-600">
+              <span>11 bed</span>
+              <span>12 bath</span>
+              <span>Private beach</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Property 3 -->
+        <div class="property-card rounded-xl overflow-hidden group cursor-pointer">
+          <div class="relative" style="height:320px;">
+            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&h=800&fit=crop&auto=format&q=80" alt="Luxury property" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-900/70 via-transparent to-transparent"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 bg-charcoal-900/80 border border-gold-400/40 text-gold-400 text-xs font-bold uppercase tracking-wider backdrop-blur-sm">Price Reduced</span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <p class="text-white font-black text-xl mb-1">The Hadleigh</p>
+              <p class="text-white/60 text-sm">Knightsbridge, London</p>
+            </div>
+          </div>
+          <div class="p-6 bg-white border-x border-b border-cream-200">
+            <div class="flex justify-between items-start mb-4">
+              <p class="text-3xl font-black text-charcoal-900">£31.8M</p>
+              <span class="px-3 py-1 border border-gold-400/40 text-gold-600 text-xs font-semibold rounded-full uppercase tracking-wider">Featured</span>
+            </div>
+            <div class="flex gap-6 text-sm text-charcoal-600">
+              <span>5 bed</span>
+              <span>7 bath</span>
+              <span>8,200 sq ft</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-32 bg-charcoal-900 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-8 relative z-10">
+      <div class="grid md:grid-cols-2 gap-20 items-center">
+        <div>
+          <p class="text-gold-400 letter-spacing-luxury uppercase text-xs font-semibold mb-4">Our Services</p>
+          <h2 class="text-4xl md:text-5xl font-black text-white mb-8 leading-tight">Bespoke service<br/>at every stage.</h2>
+          <p class="text-white/60 text-lg leading-relaxed mb-10">Aurum provides comprehensive advisory services to buyers, sellers, and investors of ultra-prime residential property. Our advisors average 22 years of experience and transact on discretion as a first principle.</p>
+          <div class="space-y-8">
+            <div class="flex gap-6">
+              <div class="w-12 h-12 rounded-xl border border-gold-500/30 bg-gold-500/10 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+              </div>
+              <div>
+                <h4 class="text-white font-bold text-lg mb-2">Private Sales</h4>
+                <p class="text-white/50 leading-relaxed text-sm">70% of our transactions occur before a property reaches public listing. Access our off-market network through a discreet introduction.</p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div class="w-12 h-12 rounded-xl border border-gold-500/30 bg-gold-500/10 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+              </div>
+              <div>
+                <h4 class="text-white font-bold text-lg mb-2">Global Acquisition</h4>
+                <p class="text-white/50 leading-relaxed text-sm">From initial search to keys in hand. Our multi-jurisdiction team navigates legal, tax, and conveyancing across 14 markets on your behalf.</p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div class="w-12 h-12 rounded-xl border border-gold-500/30 bg-gold-500/10 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              </div>
+              <div>
+                <h4 class="text-white font-bold text-lg mb-2">Portfolio Advisory</h4>
+                <p class="text-white/50 leading-relaxed text-sm">Strategic guidance for family offices and private investors on residential portfolio construction, yield optimisation, and capital preservation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1562408590-e32931084e23?w=1200&h=800&fit=crop&auto=format&q=80" alt="Luxury interior" class="rounded-2xl w-full object-cover shadow-2xl" style="height:560px;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats" class="py-32 bg-cream-100">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="text-center mb-20">
+        <p class="text-gold-500 letter-spacing-luxury uppercase text-xs font-semibold mb-4">Track record</p>
+        <h2 class="text-4xl md:text-5xl font-black text-charcoal-900 mb-6">A legacy built on results.</h2>
+        <p class="text-xl text-charcoal-600 max-w-2xl mx-auto">Since 2009, Aurum Estates has represented more than $40 billion in residential transactions across the world's most coveted addresses.</p>
+      </div>
+      <div class="grid md:grid-cols-4 gap-8 mb-20">
+        <div class="text-center p-8 bg-white rounded-2xl border border-cream-200">
+          <p class="text-5xl font-black text-charcoal-900 mb-2">$40B+</p>
+          <div class="gold-line mx-auto my-3"></div>
+          <p class="text-charcoal-600 text-sm">Total transaction volume</p>
+        </div>
+        <div class="text-center p-8 bg-white rounded-2xl border border-cream-200">
+          <p class="text-5xl font-black text-charcoal-900 mb-2">1,200+</p>
+          <div class="gold-line mx-auto my-3"></div>
+          <p class="text-charcoal-600 text-sm">Properties sold</p>
+        </div>
+        <div class="text-center p-8 bg-white rounded-2xl border border-cream-200">
+          <p class="text-5xl font-black text-charcoal-900 mb-2">14</p>
+          <div class="gold-line mx-auto my-3"></div>
+          <p class="text-charcoal-600 text-sm">Global markets</p>
+        </div>
+        <div class="text-center p-8 bg-white rounded-2xl border border-cream-200">
+          <p class="text-5xl font-black text-charcoal-900 mb-2">92%</p>
+          <div class="gold-line mx-auto my-3"></div>
+          <p class="text-charcoal-600 text-sm">Client referral rate</p>
+        </div>
+      </div>
+      <!-- Testimonial -->
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="text-3xl text-gold-500 mb-6">"</p>
+        <p class="text-2xl text-charcoal-800 font-light leading-relaxed italic mb-8">
+          "Aurum handled our sale with absolute discretion and achieved 18% above our initial valuation. Their access to international buyers is unmatched — the transaction closed in 11 days."
+        </p>
+        <p class="text-charcoal-900 font-bold">A private client</p>
+        <p class="text-charcoal-500 text-sm mt-1">Penthouse sale, Manhattan — $38.2M</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / CTA -->
+  <section id="contact" class="py-32 bg-charcoal-900">
+    <div class="max-w-5xl mx-auto px-8">
+      <div class="text-center mb-16">
+        <p class="text-gold-400 letter-spacing-luxury uppercase text-xs font-semibold mb-4">Private Enquiry</p>
+        <h2 class="text-4xl md:text-5xl font-black text-white mb-6">Begin the conversation.</h2>
+        <p class="text-xl text-white/50 max-w-xl mx-auto">All enquiries are handled with complete confidentiality. An advisor will respond within 4 hours.</p>
+      </div>
+      <div class="bg-charcoal-800 rounded-2xl border border-white/10 p-12">
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div>
+            <label class="block text-white/60 text-xs uppercase letter-spacing-luxury font-semibold mb-3">Full Name</label>
+            <input type="text" class="w-full px-4 py-4 bg-charcoal-700 border border-white/10 rounded-xl text-white placeholder-white/30 focus:outline-none focus:border-gold-500/50 transition-colors" placeholder="Your name" />
+          </div>
+          <div>
+            <label class="block text-white/60 text-xs uppercase letter-spacing-luxury font-semibold mb-3">Email Address</label>
+            <input type="email" class="w-full px-4 py-4 bg-charcoal-700 border border-white/10 rounded-xl text-white placeholder-white/30 focus:outline-none focus:border-gold-500/50 transition-colors" placeholder="your@email.com" />
+          </div>
+        </div>
+        <div class="mb-6">
+          <label class="block text-white/60 text-xs uppercase letter-spacing-luxury font-semibold mb-3">Area of Interest</label>
+          <select class="w-full px-4 py-4 bg-charcoal-700 border border-white/10 rounded-xl text-white focus:outline-none focus:border-gold-500/50 transition-colors">
+            <option class="bg-charcoal-800">Buying — under $10M</option>
+            <option class="bg-charcoal-800">Buying — $10M–$50M</option>
+            <option class="bg-charcoal-800">Buying — $50M+</option>
+            <option class="bg-charcoal-800">Selling a property</option>
+            <option class="bg-charcoal-800">Portfolio advisory</option>
+          </select>
+        </div>
+        <div class="mb-8">
+          <label class="block text-white/60 text-xs uppercase letter-spacing-luxury font-semibold mb-3">Message (optional)</label>
+          <textarea rows="4" class="w-full px-4 py-4 bg-charcoal-700 border border-white/10 rounded-xl text-white placeholder-white/30 focus:outline-none focus:border-gold-500/50 transition-colors resize-none" placeholder="Tell us about your requirements..."></textarea>
+        </div>
+        <button class="w-full py-5 bg-gold-500 hover:bg-gold-400 text-charcoal-900 font-black uppercase letter-spacing-luxury text-sm rounded-xl transition-colors">
+          Submit private enquiry
+        </button>
+        <p class="text-center text-white/30 text-xs mt-4">Strictly confidential. We never share client details.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-charcoal-900 border-t border-white/10 py-12">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-10">
+        <div>
+          <span class="text-white font-black text-xl tracking-widest uppercase">AURUM</span>
+          <div class="gold-line mt-1 mb-1"></div>
+          <span class="text-gold-500 text-xs letter-spacing-luxury uppercase font-medium">Estates</span>
+        </div>
+        <div class="flex gap-10 text-xs letter-spacing-luxury uppercase font-semibold text-white/40">
+          <a href="#" class="hover:text-gold-400 transition-colors">New York</a>
+          <a href="#" class="hover:text-gold-400 transition-colors">London</a>
+          <a href="#" class="hover:text-gold-400 transition-colors">Monaco</a>
+          <a href="#" class="hover:text-gold-400 transition-colors">Dubai</a>
+          <a href="#" class="hover:text-gold-400 transition-colors">Singapore</a>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-white/30 text-xs">© 2026 Aurum Estates Ltd. All rights reserved. Regulated by RICS.</p>
+        <div class="flex gap-6 text-white/30 text-xs">
+          <a href="#" class="hover:text-white transition-colors">Privacy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms</a>
+          <a href="#" class="hover:text-white transition-colors">Regulatory</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
