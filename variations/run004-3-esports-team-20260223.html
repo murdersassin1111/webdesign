@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEON APEX — Born to compete. Built to win.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            void:  { 900: '#07040f', 800: '#0e0919', 700: '#160d25', 600: '#1f1238' },
+            violet: { 400: '#a78bfa', 500: '#8b5cf6', 600: '#7c3aed', 700: '#6d28d9' },
+            elec:  { 400: '#34d399', 500: '#10b981', 600: '#059669' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #07040f; color: #e2e8f0; }
+    .neon-glow { box-shadow: 0 0 40px rgba(139, 92, 246, 0.35), 0 0 80px rgba(139, 92, 246, 0.1); }
+    .neon-text { text-shadow: 0 0 40px rgba(139, 92, 246, 0.6); }
+    .green-neon { text-shadow: 0 0 20px rgba(52, 211, 153, 0.5); }
+    .grid-pattern {
+      background-image:
+        linear-gradient(rgba(139,92,246,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(139,92,246,0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .scan-line::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.05) 2px, rgba(0,0,0,0.05) 4px);
+      pointer-events: none;
+    }
+    .clip-angle { clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px)); }
+    @keyframes glow-pulse { 0%,100% { opacity: 0.5; } 50% { opacity: 1; } }
+    .animate-glow { animation: glow-pulse 3s ease-in-out infinite; }
+    .trophy-bg { background: linear-gradient(135deg, rgba(139,92,246,0.15) 0%, transparent 60%); }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-void-900/90 backdrop-blur-xl border-b border-violet-500/10">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="relative">
+          <div class="w-9 h-9 bg-violet-600 clip-angle flex items-center justify-center">
+            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/></svg>
+          </div>
+        </div>
+        <span class="text-white font-black text-xl tracking-widest uppercase">NEON APEX</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-sm text-slate-400 uppercase tracking-wider font-semibold">
+        <a href="#roster" class="hover:text-violet-400 transition-colors">Roster</a>
+        <a href="#achievements" class="hover:text-violet-400 transition-colors">Wins</a>
+        <a href="#shop" class="hover:text-violet-400 transition-colors">Shop</a>
+        <a href="#join" class="hover:text-violet-400 transition-colors">Join</a>
+      </div>
+      <a href="#join" class="px-5 py-2.5 bg-violet-600 hover:bg-violet-500 text-white font-black text-sm uppercase tracking-wider rounded-sm transition-all hover:scale-105 neon-glow">
+        Fan portal
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center grid-pattern overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-violet-600/10 rounded-full blur-[120px] animate-glow"></div>
+      <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-elec-500/5 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 py-40 relative z-10 w-full">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 px-4 py-2 border border-elec-500/40 bg-elec-500/10 text-elec-400 text-xs font-black uppercase tracking-widest mb-8 rounded-sm">
+            <span class="w-2 h-2 rounded-full bg-elec-400 animate-pulse"></span>
+            Season 7 · Grand Finals Champion · $2.4M prize pool
+          </div>
+          <h1 class="text-7xl md:text-9xl font-black text-white leading-none tracking-tighter mb-6 neon-text uppercase">
+            NEON<br/><span class="text-violet-400">APEX</span>
+          </h1>
+          <p class="text-xl text-slate-400 leading-relaxed mb-10 max-w-lg">
+            We don't play games. We dominate them. Six world titles. One unstoppable roster. The most feared name in competitive esports.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#roster" class="px-8 py-4 bg-violet-600 hover:bg-violet-500 text-white font-black uppercase tracking-wider text-sm transition-all hover:scale-105 clip-angle text-center neon-glow">
+              Meet the roster
+            </a>
+            <a href="#shop" class="px-8 py-4 border border-violet-500/40 hover:border-violet-500 text-violet-400 font-bold uppercase tracking-wider text-sm transition-all text-center">
+              Shop merch →
+            </a>
+          </div>
+        </div>
+        <!-- Hero image panel -->
+        <div class="relative scan-line">
+          <div class="rounded-sm overflow-hidden border border-violet-500/20">
+            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=800&fit=crop&auto=format&q=80" alt="Esports arena" class="w-full h-80 md:h-[480px] object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-void-900 via-transparent to-transparent"></div>
+          </div>
+          <!-- Overlay stat cards -->
+          <div class="absolute bottom-6 left-6 right-6 flex gap-4">
+            <div class="flex-1 bg-void-800/90 backdrop-blur border border-violet-500/20 p-4 rounded-sm">
+              <p class="text-violet-400 font-black text-2xl">6×</p>
+              <p class="text-slate-400 text-xs uppercase tracking-wider">World Champs</p>
+            </div>
+            <div class="flex-1 bg-void-800/90 backdrop-blur border border-violet-500/20 p-4 rounded-sm">
+              <p class="text-elec-400 font-black text-2xl green-neon">$8.2M</p>
+              <p class="text-slate-400 text-xs uppercase tracking-wider">Total earnings</p>
+            </div>
+            <div class="flex-1 bg-void-800/90 backdrop-blur border border-violet-500/20 p-4 rounded-sm">
+              <p class="text-white font-black text-2xl">4.1M</p>
+              <p class="text-slate-400 text-xs uppercase tracking-wider">Global fans</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROSTER -->
+  <section id="roster" class="py-32 bg-void-800/30">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-20">
+        <p class="text-violet-400 font-black text-xs uppercase tracking-widest mb-4">The Squad</p>
+        <h2 class="text-5xl font-black text-white uppercase tracking-tight">Our Roster</h2>
+        <p class="text-slate-400 mt-4 max-w-xl mx-auto">Six athletes. One mind. The most decorated lineup in professional gaming history.</p>
+      </div>
+      <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <!-- Player 1 -->
+        <div class="group relative rounded-sm overflow-hidden border border-violet-500/10 hover:border-violet-500/50 transition-all">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&auto=format&q=80" alt="Player" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500 object-top" />
+          <div class="absolute inset-0 bg-gradient-to-t from-void-900 via-void-900/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5">
+            <p class="text-violet-400 font-black text-xs uppercase tracking-widest mb-1">IGL</p>
+            <p class="text-white font-black text-lg">K1NG</p>
+            <p class="text-slate-400 text-xs">Jakob Reyes</p>
+          </div>
+        </div>
+        <!-- Player 2 -->
+        <div class="group relative rounded-sm overflow-hidden border border-violet-500/10 hover:border-violet-500/50 transition-all">
+          <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&h=600&fit=crop&auto=format&q=80" alt="Player" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-void-900 via-void-900/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5">
+            <p class="text-violet-400 font-black text-xs uppercase tracking-widest mb-1">Fragger</p>
+            <p class="text-white font-black text-lg">PHANTOM</p>
+            <p class="text-slate-400 text-xs">Yuki Tanaka</p>
+          </div>
+        </div>
+        <!-- Player 3 -->
+        <div class="group relative rounded-sm overflow-hidden border border-elec-500/30 hover:border-elec-500/60 transition-all">
+          <img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=400&h=600&fit=crop&auto=format&q=80" alt="Player" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-void-900 via-void-900/40 to-transparent"></div>
+          <div class="absolute top-4 right-4">
+            <span class="px-2 py-1 bg-elec-500 text-void-900 text-xs font-black rounded-sm">MVP</span>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 p-5">
+            <p class="text-elec-400 font-black text-xs uppercase tracking-widest mb-1">Star Player</p>
+            <p class="text-white font-black text-lg">ZENITH</p>
+            <p class="text-slate-400 text-xs">Marcus Chen</p>
+          </div>
+        </div>
+        <!-- Player 4 -->
+        <div class="group relative rounded-sm overflow-hidden border border-violet-500/10 hover:border-violet-500/50 transition-all">
+          <img src="https://images.unsplash.com/photo-1562408590-e32931084e23?w=400&h=600&fit=crop&auto=format&q=80" alt="Player" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-void-900 via-void-900/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5">
+            <p class="text-violet-400 font-black text-xs uppercase tracking-widest mb-1">Support</p>
+            <p class="text-white font-black text-lg">ORACLE</p>
+            <p class="text-slate-400 text-xs">Aiden Park</p>
+          </div>
+        </div>
+        <!-- Player 5 -->
+        <div class="group relative rounded-sm overflow-hidden border border-violet-500/10 hover:border-violet-500/50 transition-all">
+          <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=400&h=600&fit=crop&auto=format&q=80" alt="Player" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-void-900 via-void-900/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5">
+            <p class="text-violet-400 font-black text-xs uppercase tracking-widest mb-1">Entry</p>
+            <p class="text-white font-black text-lg">BLAZE</p>
+            <p class="text-slate-400 text-xs">Sofia Vega</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements" class="py-32 bg-void-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-20">
+        <p class="text-violet-400 font-black text-xs uppercase tracking-widest mb-4">Trophy Case</p>
+        <h2 class="text-5xl font-black text-white uppercase tracking-tight mb-6">Wins speak louder.</h2>
+        <p class="text-slate-400 max-w-xl mx-auto">Three years of dominance across the biggest stages in competitive gaming. A legacy that's still being written.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-8 border border-violet-500/20 bg-violet-600/5 rounded-sm hover:border-violet-500/50 transition-all group trophy-bg">
+          <div class="flex items-start justify-between mb-6">
+            <span class="text-4xl">🏆</span>
+            <span class="px-3 py-1 bg-violet-600/20 border border-violet-500/30 text-violet-400 text-xs font-black uppercase tracking-wider rounded-sm">Season 7</span>
+          </div>
+          <h3 class="text-xl font-black text-white mb-2">Valorant Champions Tour<br/>World Championship</h3>
+          <p class="text-slate-400 text-sm">Seoul, South Korea · $1,000,000 prize · 3–1 Grand Finals</p>
+        </div>
+        <div class="p-8 border border-violet-500/20 bg-violet-600/5 rounded-sm hover:border-violet-500/50 transition-all group trophy-bg">
+          <div class="flex items-start justify-between mb-6">
+            <span class="text-4xl">🥇</span>
+            <span class="px-3 py-1 bg-violet-600/20 border border-violet-500/30 text-violet-400 text-xs font-black uppercase tracking-wider rounded-sm">Season 6</span>
+          </div>
+          <h3 class="text-xl font-black text-white mb-2">IEM Katowice<br/>CS2 Invitational</h3>
+          <p class="text-slate-400 text-sm">Katowice, Poland · $500,000 prize · Back-to-back title</p>
+        </div>
+        <div class="p-8 border border-violet-500/20 bg-violet-600/5 rounded-sm hover:border-violet-500/50 transition-all group trophy-bg">
+          <div class="flex items-start justify-between mb-6">
+            <span class="text-4xl">🏆</span>
+            <span class="px-3 py-1 bg-elec-500/20 border border-elec-500/30 text-elec-400 text-xs font-black uppercase tracking-wider rounded-sm">Season 7</span>
+          </div>
+          <h3 class="text-xl font-black text-white mb-2">League Championship<br/>Series Finals</h3>
+          <p class="text-slate-400 text-sm">Los Angeles, CA · $800,000 prize · 3–0 sweep</p>
+        </div>
+        <div class="p-8 border border-violet-500/20 bg-violet-600/5 rounded-sm hover:border-violet-500/50 transition-all group">
+          <div class="flex items-start justify-between mb-6">
+            <span class="text-4xl">🥇</span>
+            <span class="px-3 py-1 bg-violet-600/20 border border-violet-500/30 text-violet-400 text-xs font-black uppercase tracking-wider rounded-sm">Season 5</span>
+          </div>
+          <h3 class="text-xl font-black text-white mb-2">BLAST Premier<br/>Fall Finals</h3>
+          <p class="text-slate-400 text-sm">Copenhagen, Denmark · $425,000 prize</p>
+        </div>
+        <div class="p-8 border border-violet-500/20 bg-violet-600/5 rounded-sm hover:border-violet-500/50 transition-all group">
+          <div class="flex items-start justify-between mb-6">
+            <span class="text-4xl">🏆</span>
+            <span class="px-3 py-1 bg-violet-600/20 border border-violet-500/30 text-violet-400 text-xs font-black uppercase tracking-wider rounded-sm">Season 6</span>
+          </div>
+          <h3 class="text-xl font-black text-white mb-2">ESL Pro League<br/>Season 18</h3>
+          <p class="text-slate-400 text-sm">Malta, Europe · $750,000 prize · Tournament MVPs ×3</p>
+        </div>
+        <div class="p-8 border border-white/5 bg-white/2 rounded-sm text-center flex flex-col items-center justify-center min-h-48">
+          <p class="text-violet-400 font-black text-4xl mb-2">+28</p>
+          <p class="text-slate-400 text-sm uppercase tracking-wider">more tournament wins since 2023</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN / CTA -->
+  <section id="join" class="py-32 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-violet-900/30 via-void-900 to-void-900 grid-pattern"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-violet-600/15 blur-3xl rounded-full"></div>
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <p class="text-violet-400 font-black text-xs uppercase tracking-widest mb-6">Join the movement</p>
+      <h2 class="text-6xl md:text-7xl font-black text-white uppercase tracking-tight mb-6 neon-text">
+        Bleed<br/>NEON.
+      </h2>
+      <p class="text-xl text-slate-400 mb-12 max-w-2xl mx-auto">Join 4.1 million fans. Get exclusive content, early merch drops, match notifications, and direct access to our players.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <a href="#" class="px-10 py-5 bg-violet-600 hover:bg-violet-500 text-white font-black uppercase tracking-wider text-lg transition-all hover:scale-105 neon-glow clip-angle">
+          Join fan portal
+        </a>
+        <a href="#" class="px-10 py-5 border border-violet-500/40 hover:border-violet-500 text-violet-400 font-bold uppercase tracking-wider text-lg transition-all">
+          Shop merch →
+        </a>
+      </div>
+      <!-- Sponsors -->
+      <div class="pt-12 border-t border-white/10">
+        <p class="text-slate-600 text-xs uppercase tracking-widest mb-8">Supported by</p>
+        <div class="flex flex-wrap justify-center items-center gap-10 opacity-40">
+          <span class="text-white font-black text-xl tracking-wider">RAZER</span>
+          <span class="text-white font-black text-xl tracking-wider">ASUS ROG</span>
+          <span class="text-white font-black text-xl tracking-wider">RED BULL</span>
+          <span class="text-white font-black text-xl tracking-wider">CORSAIR</span>
+          <span class="text-white font-black text-xl tracking-wider">TWITCH</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-void-900 border-t border-white/5 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-7 h-7 bg-violet-600 clip-angle flex items-center justify-center">
+              <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/></svg>
+            </div>
+            <span class="text-white font-black text-lg uppercase tracking-widest">NEON APEX</span>
+          </div>
+          <p class="text-slate-500 text-sm leading-relaxed">6× World Champions. Built in Seattle, WA. Competing globally.</p>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Team</p>
+          <ul class="space-y-3 text-slate-500 text-sm">
+            <li><a href="#" class="hover:text-violet-400 transition-colors">Roster</a></li>
+            <li><a href="#" class="hover:text-violet-400 transition-colors">Coaching Staff</a></li>
+            <li><a href="#" class="hover:text-violet-400 transition-colors">Achievements</a></li>
+            <li><a href="#" class="hover:text-violet-400 transition-colors">Schedule</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Community</p>
+          <ul class="space-y-3 text-slate-500 text-sm">
+            <li><a href="#" class="hover:text-violet-400 transition-colors">Fan Portal</a></li>
+            <li><a href="#" class="hover:text-violet-400 transition-colors">Discord Server</a></li>
+            <li><a href="#" class="hover:text-violet-400 transition-colors">Live on Twitch</a></li>
+            <li><a href="#" class="hover:text-violet-400 transition-colors">YouTube VODs</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Organisation</p>
+          <ul class="space-y-3 text-slate-500 text-sm">
+            <li><a href="#" class="hover:text-violet-400 transition-colors">About</a></li>
+            <li><a href="#" class="hover:text-violet-400 transition-colors">Merchandise</a></li>
+            <li><a href="#" class="hover:text-violet-400 transition-colors">Sponsorships</a></li>
+            <li><a href="#" class="hover:text-violet-400 transition-colors">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-slate-600 text-sm">© 2026 NEON APEX Esports Organization. All rights reserved.</p>
+        <div class="flex gap-6 text-slate-600 text-sm">
+          <a href="#" class="hover:text-white transition-colors">Privacy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms</a>
+          <a href="#" class="hover:text-white transition-colors">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

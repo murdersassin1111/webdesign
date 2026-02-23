@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terroir Studio — Architecture in harmony with the earth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            sage:  { 50: '#f3f6f0', 100: '#e4ecdc', 300: '#a8c490', 400: '#85ad6b', 500: '#5f8f42', 600: '#487030', 700: '#345422' },
+            stone: { 50: '#faf9f7', 100: '#f2f0ec', 200: '#e4dfd7', 400: '#a8a098', 600: '#6b6360', 700: '#4a4340', 900: '#1e1c1a' },
+            warm:  { 50: '#fffdf7', 100: '#fef9ed' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #faf9f7; color: #1e1c1a; }
+    .hero-overlay { background: linear-gradient(to right, rgba(30,28,26,0.75) 40%, rgba(30,28,26,0.1) 100%); }
+    .text-balance { text-wrap: balance; }
+    .project-card img { transition: transform 0.5s ease; }
+    .project-card:hover img { transform: scale(1.04); }
+    .project-card { overflow: hidden; }
+    .dot-bg { background-image: radial-gradient(circle, #a8a098 1px, transparent 1px); background-size: 24px 24px; }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-stone-50/90 backdrop-blur-lg border-b border-stone-200/60">
+    <div class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-sm bg-sage-500 rotate-45 transform"></div>
+        <span class="text-stone-900 font-black text-xl tracking-tight ml-1">Terroir Studio</span>
+      </div>
+      <div class="hidden md:flex items-center gap-10 text-sm text-stone-600">
+        <a href="#work" class="hover:text-sage-600 transition-colors">Work</a>
+        <a href="#approach" class="hover:text-sage-600 transition-colors">Approach</a>
+        <a href="#stats" class="hover:text-sage-600 transition-colors">Studio</a>
+        <a href="#contact" class="hover:text-sage-600 transition-colors">Contact</a>
+      </div>
+      <a href="#contact" class="px-6 py-2.5 bg-stone-900 hover:bg-sage-700 text-white font-semibold text-sm rounded-full transition-colors">
+        Start a project
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&h=800&fit=crop&auto=format&q=80"
+        alt="Sustainable architecture project"
+        class="w-full h-full object-cover"
+      />
+      <div class="hero-overlay absolute inset-0"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-8 py-40">
+      <div class="max-w-2xl">
+        <p class="text-sage-300 font-medium text-sm uppercase tracking-widest mb-6">Sustainable Architecture Studio</p>
+        <h1 class="text-6xl md:text-8xl font-black text-white leading-none tracking-tighter mb-8 text-balance">
+          Built to<br/>outlast us<br/>all.
+        </h1>
+        <p class="text-xl text-white/70 leading-relaxed mb-10 max-w-lg">
+          Terroir Studio designs buildings that belong to their landscape. Zero-carbon, fully certified, and built to endure for generations — not just pass the next inspection.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#work" class="px-8 py-4 bg-sage-500 hover:bg-sage-400 text-white font-bold rounded-full transition-all hover:scale-105 text-center">
+            View our work
+          </a>
+          <a href="#contact" class="px-8 py-4 border border-white/30 hover:border-white/60 text-white font-semibold rounded-full transition-all text-center">
+            Talk about your project
+          </a>
+        </div>
+      </div>
+      <!-- Stats bar -->
+      <div class="absolute bottom-12 left-8 right-8 flex flex-wrap gap-12">
+        <div>
+          <p class="text-3xl font-black text-white">140+</p>
+          <p class="text-white/50 text-sm">Projects completed</p>
+        </div>
+        <div>
+          <p class="text-3xl font-black text-white">28</p>
+          <p class="text-white/50 text-sm">LEED Platinum certifications</p>
+        </div>
+        <div>
+          <p class="text-3xl font-black text-white">Net Zero</p>
+          <p class="text-white/50 text-sm">Studio operations since 2021</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK / PROJECTS -->
+  <section id="work" class="py-32 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <p class="text-sage-600 font-semibold text-sm uppercase tracking-widest mb-3">Selected Work</p>
+          <h2 class="text-4xl md:text-5xl font-black text-stone-900 leading-tight">Projects that matter.</h2>
+        </div>
+        <a href="#" class="text-sage-600 font-semibold text-sm hover:text-sage-700 flex items-center gap-2 whitespace-nowrap">
+          View all 140+ projects
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <div class="project-card rounded-2xl col-span-2 relative" style="min-height:420px;">
+          <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&h=800&fit=crop&auto=format&q=80" alt="Canopy House" class="w-full h-full object-cover rounded-2xl" style="min-height:420px;" />
+          <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/20 to-transparent rounded-2xl flex items-end p-8">
+            <div>
+              <span class="inline-block px-3 py-1 bg-sage-500/90 text-white text-xs font-semibold rounded-full mb-3">Residential · LEED Platinum</span>
+              <h3 class="text-2xl font-black text-white mb-1">Canopy House</h3>
+              <p class="text-white/60 text-sm">Sonoma, California — 4,200 sq ft passive house integrated into a 40-acre vineyard</p>
+            </div>
+          </div>
+        </div>
+        <div class="project-card rounded-2xl relative" style="min-height:420px;">
+          <img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=1200&h=800&fit=crop&auto=format&q=80" alt="Meridian Office Park" class="w-full h-full object-cover rounded-2xl" style="min-height:420px;" />
+          <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/20 to-transparent rounded-2xl flex items-end p-8">
+            <div>
+              <span class="inline-block px-3 py-1 bg-sage-500/90 text-white text-xs font-semibold rounded-full mb-3">Commercial · Net Zero</span>
+              <h3 class="text-xl font-black text-white mb-1">Holloway Office Park</h3>
+              <p class="text-white/60 text-sm">Austin, Texas — 3-building campus generating 110% of its own energy</p>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-card rounded-2xl relative" style="min-height:320px;">
+          <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&h=800&fit=crop&auto=format&q=80" alt="Watershed Community Center" class="w-full h-full object-cover rounded-2xl" style="min-height:320px;" />
+          <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/20 to-transparent rounded-2xl flex items-end p-8">
+            <div>
+              <span class="inline-block px-3 py-1 bg-sage-500/90 text-white text-xs font-semibold rounded-full mb-3">Public · Mass Timber</span>
+              <h3 class="text-xl font-black text-white mb-1">Watershed Community Center</h3>
+              <p class="text-white/60 text-sm">Portland, Oregon</p>
+            </div>
+          </div>
+        </div>
+        <div class="project-card rounded-2xl col-span-2 relative" style="min-height:320px;">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=800&fit=crop&auto=format&q=80" alt="Solaris Residential Tower" class="w-full h-full object-cover rounded-2xl" style="min-height:320px;" />
+          <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/20 to-transparent rounded-2xl flex items-end p-8">
+            <div>
+              <span class="inline-block px-3 py-1 bg-sage-500/90 text-white text-xs font-semibold rounded-full mb-3">Mixed-Use · Biophilic Design</span>
+              <h3 class="text-2xl font-black text-white mb-1">Solaris Residential Tower</h3>
+              <p class="text-white/60 text-sm">Denver, Colorado — 28-story mass timber residential building with integrated living walls and rooftop farm</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section id="approach" class="py-32 bg-stone-900 relative overflow-hidden">
+    <div class="absolute inset-0 dot-bg opacity-20"></div>
+    <div class="max-w-7xl mx-auto px-8 relative z-10">
+      <div class="grid md:grid-cols-2 gap-20 items-center">
+        <div>
+          <p class="text-sage-400 font-semibold text-sm uppercase tracking-widest mb-4">Our Approach</p>
+          <h2 class="text-4xl md:text-5xl font-black text-white mb-8 leading-tight">We design for<br/>the 200-year view.</h2>
+          <p class="text-white/60 text-lg leading-relaxed mb-10">Most buildings are designed to last 30 years. We design buildings for 200. That changes every decision — from foundation depth to material sourcing to how the building will be decommissioned when its time comes.</p>
+          <div class="space-y-6">
+            <div class="flex gap-5">
+              <div class="w-10 h-10 rounded-full bg-sage-500/20 border border-sage-500/30 flex items-center justify-center flex-shrink-0">
+                <span class="text-sage-400 font-bold text-sm">01</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-2">Site-first design</h4>
+                <p class="text-white/50 text-sm leading-relaxed">We spend months understanding sun angles, prevailing winds, soil composition, and local ecology before a single line is drawn. The site tells us what to build.</p>
+              </div>
+            </div>
+            <div class="flex gap-5">
+              <div class="w-10 h-10 rounded-full bg-sage-500/20 border border-sage-500/30 flex items-center justify-center flex-shrink-0">
+                <span class="text-sage-400 font-bold text-sm">02</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-2">Material honesty</h4>
+                <p class="text-white/50 text-sm leading-relaxed">We use mass timber, rammed earth, recycled steel, and locally sourced stone. We track embodied carbon for every project and publish the numbers openly.</p>
+              </div>
+            </div>
+            <div class="flex gap-5">
+              <div class="w-10 h-10 rounded-full bg-sage-500/20 border border-sage-500/30 flex items-center justify-center flex-shrink-0">
+                <span class="text-sage-400 font-bold text-sm">03</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-2">Performance guaranteed</h4>
+                <p class="text-white/50 text-sm leading-relaxed">Every Terroir project comes with a 10-year energy performance guarantee. If it doesn't perform as modelled, we return the difference.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-6">
+          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
+            <p class="text-4xl font-black text-sage-400 mb-2">68%</p>
+            <p class="text-white font-semibold mb-1">Lower embodied carbon</p>
+            <p class="text-white/50 text-sm">Average vs conventional construction — independently verified by Carbon Leadership Forum</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
+            <p class="text-4xl font-black text-sage-400 mb-2">100%</p>
+            <p class="text-white font-semibold mb-1">Renewable energy design</p>
+            <p class="text-white/50 text-sm">Every project we design is capable of net-zero or net-positive energy operation through passive design and on-site generation</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
+            <p class="text-4xl font-black text-sage-400 mb-2">28</p>
+            <p class="text-white font-semibold mb-1">LEED Platinum certifications</p>
+            <p class="text-white/50 text-sm">The most of any studio of our size in the western United States</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section id="contact" class="py-32 bg-sage-50">
+    <div class="max-w-4xl mx-auto px-8 text-center">
+      <p class="text-sage-600 font-semibold text-sm uppercase tracking-widest mb-4">Start a project</p>
+      <h2 class="text-5xl md:text-6xl font-black text-stone-900 mb-6 leading-tight">Ready to build<br/>something that lasts?</h2>
+      <p class="text-xl text-stone-600 mb-12 max-w-2xl mx-auto leading-relaxed">We take on 8–12 projects per year. We'd rather work with fewer clients and do exceptional work than spread ourselves thin. Tell us about your vision.</p>
+      <div class="bg-white rounded-3xl border border-stone-200 p-10 shadow-sm text-left">
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div>
+            <label class="block text-stone-700 text-sm font-semibold mb-2">Name</label>
+            <input type="text" class="w-full px-4 py-3 border border-stone-200 rounded-xl text-stone-900 focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent bg-stone-50" placeholder="Your name" />
+          </div>
+          <div>
+            <label class="block text-stone-700 text-sm font-semibold mb-2">Email</label>
+            <input type="email" class="w-full px-4 py-3 border border-stone-200 rounded-xl text-stone-900 focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent bg-stone-50" placeholder="your@email.com" />
+          </div>
+        </div>
+        <div class="mb-6">
+          <label class="block text-stone-700 text-sm font-semibold mb-2">Project type</label>
+          <select class="w-full px-4 py-3 border border-stone-200 rounded-xl text-stone-700 focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent bg-stone-50">
+            <option>Residential (custom home)</option>
+            <option>Commercial office</option>
+            <option>Mixed-use development</option>
+            <option>Public / civic building</option>
+            <option>Renovation / retrofit</option>
+          </select>
+        </div>
+        <div class="mb-8">
+          <label class="block text-stone-700 text-sm font-semibold mb-2">Tell us about your project</label>
+          <textarea rows="4" class="w-full px-4 py-3 border border-stone-200 rounded-xl text-stone-900 focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent bg-stone-50 resize-none" placeholder="Site location, size, timeline, sustainability goals..."></textarea>
+        </div>
+        <button class="w-full py-4 bg-stone-900 hover:bg-sage-700 text-white font-bold rounded-xl transition-colors text-lg">
+          Send enquiry →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-stone-900 py-16">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-6 h-6 rounded-sm bg-sage-500 rotate-45 transform"></div>
+            <span class="text-white font-black text-xl ml-1">Terroir Studio</span>
+          </div>
+          <p class="text-white/40 text-sm leading-relaxed max-w-xs">Sustainable architecture. Portland, OR — Austin, TX — New York, NY. Accepting new projects for 2027.</p>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4">Services</p>
+          <ul class="space-y-3 text-white/40 text-sm">
+            <li><a href="#" class="hover:text-sage-400 transition-colors">Custom Residences</a></li>
+            <li><a href="#" class="hover:text-sage-400 transition-colors">Commercial Design</a></li>
+            <li><a href="#" class="hover:text-sage-400 transition-colors">Urban Master Plans</a></li>
+            <li><a href="#" class="hover:text-sage-400 transition-colors">Sustainability Consulting</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4">Studio</p>
+          <ul class="space-y-3 text-white/40 text-sm">
+            <li><a href="#" class="hover:text-sage-400 transition-colors">About</a></li>
+            <li><a href="#" class="hover:text-sage-400 transition-colors">Team</a></li>
+            <li><a href="#" class="hover:text-sage-400 transition-colors">Awards</a></li>
+            <li><a href="#" class="hover:text-sage-400 transition-colors">Journal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-white/30 text-sm">© 2026 Terroir Studio LLC. All rights reserved.</p>
+        <p class="text-white/30 text-sm">AIA Member · LEED AP · CEPH Certified</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

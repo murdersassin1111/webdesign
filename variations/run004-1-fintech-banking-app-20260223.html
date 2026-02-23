@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meridian — Banking built for the next generation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            ink:  { 900: '#0d1526', 800: '#152038', 700: '#1e2f4d', 600: '#243862' },
+            gold: { 300: '#fcd97a', 400: '#f8c843', 500: '#e9b521', 600: '#c99810' },
+            mist: { 50: '#f7f8fc', 100: '#eef0f8', 200: '#dde2f0' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .card-shine { background: linear-gradient(135deg, #152038 60%, #1e3a6e 100%); }
+    .gold-gradient { background: linear-gradient(90deg, #f8c843, #e9b521); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-bg { background: linear-gradient(150deg, #0d1526 0%, #152038 50%, #0d1a35 100%); }
+    .feature-card:hover { transform: translateY(-4px); }
+    .feature-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+  </style>
+</head>
+<body class="antialiased bg-mist-50 text-ink-900">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-ink-900/95 backdrop-blur-xl border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-gold-400 flex items-center justify-center">
+          <svg class="w-4 h-4 text-ink-900" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"/></svg>
+        </div>
+        <span class="text-white font-bold text-xl tracking-tight">Meridian</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-sm text-white/60">
+        <a href="#features" class="hover:text-white transition-colors">Features</a>
+        <a href="#stats" class="hover:text-white transition-colors">Why Meridian</a>
+        <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+        <a href="#" class="hover:text-white transition-colors">Business</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="text-sm text-white/60 hover:text-white transition-colors hidden md:block">Sign in</a>
+        <a href="#" class="px-5 py-2.5 bg-gold-400 hover:bg-gold-300 text-ink-900 font-bold text-sm rounded-xl transition-all hover:scale-105">
+          Open free account
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg pt-28 pb-24 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-gold-400/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-ink-600/40 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold-400/30 bg-gold-400/10 text-gold-300 text-sm font-medium mb-8">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            FDIC Insured · No hidden fees · 4.85% APY
+          </div>
+          <h1 class="text-5xl md:text-6xl font-black text-white leading-tight tracking-tight mb-6">
+            Your money,<br/>working as hard<br/>as you do.
+          </h1>
+          <p class="text-xl text-white/60 leading-relaxed mb-10">
+            Meridian is the bank account that actually earns. High-yield savings, instant transfers, and a debit card with real cashback — all in one beautifully simple app.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#" class="px-8 py-4 bg-gold-400 hover:bg-gold-300 text-ink-900 font-black rounded-xl transition-all hover:scale-105 text-center shadow-2xl shadow-gold-400/20">
+              Open your account — free
+            </a>
+            <a href="#features" class="px-8 py-4 border border-white/20 hover:border-white/40 text-white font-semibold rounded-xl transition-all text-center">
+              See all features
+            </a>
+          </div>
+          <div class="flex items-center gap-8 mt-12">
+            <div>
+              <p class="text-3xl font-black text-white">4.85%</p>
+              <p class="text-white/50 text-sm">APY on savings</p>
+            </div>
+            <div class="w-px h-10 bg-white/10"></div>
+            <div>
+              <p class="text-3xl font-black text-white">$0</p>
+              <p class="text-white/50 text-sm">Monthly fees</p>
+            </div>
+            <div class="w-px h-10 bg-white/10"></div>
+            <div>
+              <p class="text-3xl font-black text-white">2%</p>
+              <p class="text-white/50 text-sm">Unlimited cashback</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card mockup -->
+        <div class="flex justify-center">
+          <div class="relative">
+            <!-- Card back -->
+            <div class="absolute top-8 -left-4 w-80 h-48 rounded-2xl card-shine border border-white/10 rotate-6 shadow-2xl">
+              <div class="absolute bottom-6 left-6 text-white/30 text-xs font-mono">MERIDIAN BANK</div>
+            </div>
+            <!-- Card front -->
+            <div class="relative w-80 h-48 rounded-2xl card-shine border border-white/15 shadow-2xl overflow-hidden">
+              <div class="absolute top-0 right-0 w-48 h-48 bg-gold-400/10 rounded-full blur-2xl"></div>
+              <div class="p-6 h-full flex flex-col justify-between">
+                <div class="flex justify-between items-start">
+                  <div class="w-10 h-8 rounded-md bg-gold-400/80 border border-gold-300/50"></div>
+                  <svg class="w-12 h-8 text-white/20" viewBox="0 0 50 30" fill="currentColor"><circle cx="20" cy="15" r="15" opacity="0.6"/><circle cx="30" cy="15" r="15" opacity="0.4"/></svg>
+                </div>
+                <div>
+                  <p class="text-white/40 text-xs font-mono mb-1">CARD NUMBER</p>
+                  <p class="text-white font-mono text-lg tracking-widest">•••• •••• •••• 4291</p>
+                </div>
+                <div class="flex justify-between">
+                  <div>
+                    <p class="text-white/40 text-xs font-mono mb-1">CARDHOLDER</p>
+                    <p class="text-white font-semibold text-sm">Alex Johnson</p>
+                  </div>
+                  <div>
+                    <p class="text-white/40 text-xs font-mono mb-1">EXPIRES</p>
+                    <p class="text-white font-semibold text-sm">09/29</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Balance widget -->
+            <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl p-4 shadow-xl border border-mist-200">
+              <p class="text-ink-700 text-xs font-semibold mb-1">Savings balance</p>
+              <p class="text-ink-900 text-2xl font-black">$18,432.10</p>
+              <p class="text-green-600 text-xs font-medium mt-1 flex items-center gap-1">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+                +$74.22 this month
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-20">
+        <p class="text-gold-500 font-semibold text-sm uppercase tracking-widest mb-4">Features</p>
+        <h2 class="text-4xl md:text-5xl font-black text-ink-900 mb-6">Everything your bank should be.</h2>
+        <p class="text-xl text-ink-700/60 max-w-2xl mx-auto">We stripped out the complexity and fees. What's left is a banking experience that actually makes sense.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="feature-card p-8 rounded-2xl bg-mist-50 border border-mist-100">
+          <div class="w-12 h-12 rounded-2xl bg-ink-900 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-ink-900 mb-3">4.85% APY Savings</h3>
+          <p class="text-ink-700/60 text-sm leading-relaxed">Earn 12× the national average. Interest compounds daily, paid monthly. No minimum balance, no rate tiers.</p>
+        </div>
+        <div class="feature-card p-8 rounded-2xl bg-mist-50 border border-mist-100">
+          <div class="w-12 h-12 rounded-2xl bg-ink-900 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-ink-900 mb-3">2% Cashback Always</h3>
+          <p class="text-ink-700/60 text-sm leading-relaxed">Every swipe. Every tap. No rotating categories, no activation hoops. Cashback hits your account instantly.</p>
+        </div>
+        <div class="feature-card p-8 rounded-2xl bg-mist-50 border border-mist-100">
+          <div class="w-12 h-12 rounded-2xl bg-ink-900 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-ink-900 mb-3">Instant Transfers</h3>
+          <p class="text-ink-700/60 text-sm leading-relaxed">Send money in seconds via Meridian-to-Meridian. External transfers post same day. Wire anywhere in the world for $0.</p>
+        </div>
+        <div class="feature-card p-8 rounded-2xl bg-mist-50 border border-mist-100">
+          <div class="w-12 h-12 rounded-2xl bg-ink-900 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-ink-900 mb-3">Smart Budgeting</h3>
+          <p class="text-ink-700/60 text-sm leading-relaxed">AI-powered spending insights automatically categorise transactions and surface trends — no manual setup required.</p>
+        </div>
+      </div>
+
+      <!-- Large feature highlight -->
+      <div class="mt-16 grid md:grid-cols-2 gap-8">
+        <div class="rounded-2xl overflow-hidden bg-ink-900 p-10 flex flex-col justify-between" style="min-height:320px;">
+          <div>
+            <p class="text-gold-400 font-semibold text-sm uppercase tracking-widest mb-4">Early access</p>
+            <h3 class="text-3xl font-black text-white mb-4">Get paid 2 days early.</h3>
+            <p class="text-white/50 leading-relaxed">Set up direct deposit and unlock access to your paycheck the moment your employer submits it — not when banks decide to release it.</p>
+          </div>
+          <div class="mt-8 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gold-400 flex items-center justify-center">
+              <svg class="w-5 h-5 text-ink-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <p class="text-white/70 text-sm">Available with any direct deposit amount</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden relative" style="min-height:320px;">
+          <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=1200&h=800&fit=crop&auto=format&q=80" alt="Mobile banking" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-tr from-ink-900/80 to-transparent flex items-end p-10">
+            <div>
+              <h3 class="text-2xl font-black text-white mb-2">Zero ATM fees. Globally.</h3>
+              <p class="text-white/60 text-sm">55,000+ fee-free ATMs in the US. Use any ATM worldwide and we reimburse fees instantly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats" class="py-32 bg-ink-900 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-96 h-96 bg-gold-400/5 rounded-full blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-black text-white mb-6">Trusted by 2.1 million people<br/>and growing fast.</h2>
+        <p class="text-xl text-white/50 max-w-2xl mx-auto">Meridian launched in 2022. In three years, it's become the highest-rated banking app in the App Store.</p>
+      </div>
+      <div class="grid md:grid-cols-4 gap-8 mb-20">
+        <div class="text-center">
+          <p class="text-5xl font-black text-gold-400 mb-3">2.1M+</p>
+          <p class="text-white/50">Active account holders</p>
+        </div>
+        <div class="text-center">
+          <p class="text-5xl font-black text-gold-400 mb-3">4.9★</p>
+          <p class="text-white/50">App Store rating (180K reviews)</p>
+        </div>
+        <div class="text-center">
+          <p class="text-5xl font-black text-gold-400 mb-3">$4.2B</p>
+          <p class="text-white/50">Deposits held</p>
+        </div>
+        <div class="text-center">
+          <p class="text-5xl font-black text-gold-400 mb-3">$0</p>
+          <p class="text-white/50">Overdraft fees charged. Ever.</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-2xl border border-white/10 bg-white/5">
+          <div class="flex gap-1 mb-4 text-gold-400 text-lg">★★★★★</div>
+          <p class="text-white/70 italic leading-relaxed mb-6 text-sm">"I switched from Chase and I'll never go back. The 4.85% APY alone more than pays for itself. The app is clean, fast, and support actually responds."</p>
+          <p class="text-white font-semibold text-sm">Samantha K.</p>
+          <p class="text-white/40 text-xs">Meridian member since 2023</p>
+        </div>
+        <div class="p-8 rounded-2xl border border-white/10 bg-white/5">
+          <div class="flex gap-1 mb-4 text-gold-400 text-lg">★★★★★</div>
+          <p class="text-white/70 italic leading-relaxed mb-6 text-sm">"Got paid 2 days early every paycheck for 8 months now. Made an extra $340 in cashback last year. This is what banking should've always been."</p>
+          <p class="text-white font-semibold text-sm">Derek W.</p>
+          <p class="text-white/40 text-xs">Meridian member since 2022</p>
+        </div>
+        <div class="p-8 rounded-2xl border border-white/10 bg-white/5">
+          <div class="flex gap-1 mb-4 text-gold-400 text-lg">★★★★★</div>
+          <p class="text-white/70 italic leading-relaxed mb-6 text-sm">"Used an ATM in Tokyo. Got the fee reimbursed in 47 seconds. That alone made me a Meridian customer for life."</p>
+          <p class="text-white font-semibold text-sm">Priya M.</p>
+          <p class="text-white/40 text-xs">Meridian member since 2024</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="py-32 bg-mist-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-20">
+        <p class="text-gold-500 font-semibold text-sm uppercase tracking-widest mb-4">Simple pricing</p>
+        <h2 class="text-4xl md:text-5xl font-black text-ink-900 mb-6">Always free. Or unlock more.</h2>
+        <p class="text-xl text-ink-700/60 max-w-2xl mx-auto">The core Meridian account is free forever. Meridian Plus adds powerful tools for serious savers and travelers.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div class="p-10 rounded-2xl bg-white border border-mist-200 shadow-sm">
+          <p class="text-ink-600 font-semibold mb-2">Meridian Free</p>
+          <p class="text-5xl font-black text-ink-900 mb-1">$0<span class="text-xl font-normal text-ink-600/50">/mo</span></p>
+          <p class="text-ink-600/50 text-sm mb-8">No catch. No credit check.</p>
+          <ul class="space-y-4 text-ink-700 text-sm mb-10">
+            <li class="flex gap-3"><svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>4.85% APY savings account</li>
+            <li class="flex gap-3"><svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>1% cashback debit card</li>
+            <li class="flex gap-3"><svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Instant transfers</li>
+            <li class="flex gap-3"><svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>55,000 fee-free ATMs</li>
+            <li class="flex gap-3"><svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>2-day early paycheck</li>
+          </ul>
+          <a href="#" class="block text-center py-3.5 border-2 border-ink-900 text-ink-900 hover:bg-ink-900 hover:text-white font-bold rounded-xl transition-colors">Open free account</a>
+        </div>
+        <div class="p-10 rounded-2xl bg-ink-900 border border-ink-700 relative">
+          <span class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gold-400 text-ink-900 text-xs font-black rounded-full uppercase tracking-wider">Best value</span>
+          <p class="text-gold-400 font-semibold mb-2">Meridian Plus</p>
+          <p class="text-5xl font-black text-white mb-1">$9<span class="text-xl font-normal text-white/40">/mo</span></p>
+          <p class="text-white/40 text-sm mb-8">Pays for itself with cashback alone</p>
+          <ul class="space-y-4 text-white/70 text-sm mb-10">
+            <li class="flex gap-3"><svg class="w-5 h-5 text-gold-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Everything in Free</li>
+            <li class="flex gap-3"><svg class="w-5 h-5 text-gold-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><strong class="text-white">2% cashback</strong> on all purchases</li>
+            <li class="flex gap-3"><svg class="w-5 h-5 text-gold-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Global ATM reimbursements</li>
+            <li class="flex gap-3"><svg class="w-5 h-5 text-gold-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Travel insurance + lounge access</li>
+            <li class="flex gap-3"><svg class="w-5 h-5 text-gold-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Priority 24/7 phone support</li>
+          </ul>
+          <a href="#" class="block text-center py-3.5 bg-gold-400 hover:bg-gold-300 text-ink-900 font-black rounded-xl transition-colors">Upgrade to Plus</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink-900 py-16 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 rounded-lg bg-gold-400 flex items-center justify-center">
+              <svg class="w-4 h-4 text-ink-900" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"/></svg>
+            </div>
+            <span class="text-white font-bold text-lg">Meridian</span>
+          </div>
+          <p class="text-white/40 text-sm leading-relaxed">Banking without the bullshit. FDIC insured up to $250,000 through Meridian Bank, Member FDIC.</p>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4">Product</p>
+          <ul class="space-y-3 text-white/40 text-sm">
+            <li><a href="#" class="hover:text-white transition-colors">Savings Account</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Debit Card</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Meridian Plus</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Business Banking</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4">Company</p>
+          <ul class="space-y-3 text-white/40 text-sm">
+            <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Press</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4">Legal</p>
+          <ul class="space-y-3 text-white/40 text-sm">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">FDIC Disclosure</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Rate Methodology</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-white/30 text-sm">© 2026 Meridian Financial Inc. All rights reserved.</p>
+        <p class="text-white/20 text-xs text-center">APY accurate as of 2/23/2026. Rates subject to change without notice. FDIC insured.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

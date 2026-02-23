@@ -1,5 +1,5 @@
 {
-  "run": 3,
+  "run": 4,
   "used_themes": [
     "Food Delivery App",
     "B2B Logistics Platform",
@@ -9,9 +9,36 @@
     "Fitness & Wellness App",
     "Cybersecurity SaaS",
     "AI Healthcare Platform",
-    "Electric Vehicle Startup"
+    "Electric Vehicle Startup",
+    "Fintech Banking App",
+    "Sustainable Architecture",
+    "Esports Team"
   ],
   "generated": [
+    {
+      "run": 4,
+      "date": "2026-02-23",
+      "entries": [
+        {
+          "industry": "Fintech Banking App",
+          "company": "Meridian",
+          "palette": "Navy Ink / Gold / Mist White",
+          "file": "run004-1-fintech-banking-app-20260223.html"
+        },
+        {
+          "industry": "Sustainable Architecture",
+          "company": "Terroir Studio",
+          "palette": "Sage Green / Stone / Warm White",
+          "file": "run004-2-sustainable-architecture-20260223.html"
+        },
+        {
+          "industry": "Esports Team",
+          "company": "NEON APEX",
+          "palette": "Deep Void / Violet / Electric Green",
+          "file": "run004-3-esports-team-20260223.html"
+        }
+      ]
+    },
     {
       "run": 3,
       "date": "2026-02-23",
