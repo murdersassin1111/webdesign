@@ -1,12 +1,40 @@
 {
-  "run": 2,
+  "run": 3,
   "used_themes": [
     "Food Delivery App",
     "B2B Logistics Platform",
     "Legal Tech Platform",
     "Craft Coffee Roastery",
     "Gaming Studio",
-    "Fitness & Wellness App"
+    "Fitness & Wellness App",
+    "Cybersecurity SaaS",
+    "AI Healthcare Platform",
+    "Electric Vehicle Startup"
   ],
-  "generated": []
+  "generated": [
+    {
+      "run": 3,
+      "date": "2026-02-23",
+      "entries": [
+        {
+          "industry": "Cybersecurity SaaS",
+          "company": "Vaultex",
+          "palette": "Navy / Cyan / Slate",
+          "file": "run003-1-cybersecurity-saas-20260223.html"
+        },
+        {
+          "industry": "AI Healthcare Platform",
+          "company": "Lumina Health",
+          "palette": "Teal / White / Slate",
+          "file": "run003-2-ai-healthcare-platform-20260223.html"
+        },
+        {
+          "industry": "Electric Vehicle Startup",
+          "company": "Voltis Motors",
+          "palette": "Charcoal / Volt Green / White",
+          "file": "run003-3-electric-vehicle-startup-20260223.html"
+        }
+      ]
+    }
+  ]
 }

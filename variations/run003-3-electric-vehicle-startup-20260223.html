@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voltis Motors — Drive Electric. Drive Forward.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            volt: { 400: '#a3e635', 500: '#84cc16', 600: '#65a30d', 700: '#4d7c0f' },
+            charcoal: { 800: '#1c1c1e', 900: '#111111', 950: '#0a0a0a' },
+            warm: { 100: '#f5f5f0', 200: '#ebebdf' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #111111; color: #e5e5e5; }
+    .volt-glow { box-shadow: 0 0 60px rgba(163, 230, 53, 0.2); }
+    .volt-text { color: #a3e635; }
+    .section-light { background: #f5f5f0; color: #1c1c1e; }
+    .hero-img { object-position: center 60%; }
+    .stat-border { border-left: 3px solid #a3e635; }
+    .nav-scroll { transition: background 0.3s; }
+    @keyframes float { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+    .float { animation: float 4s ease-in-out infinite; }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 nav-scroll bg-charcoal-950/80 backdrop-blur-xl border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <svg class="w-8 h-8" viewBox="0 0 32 32" fill="none">
+          <path d="M16 4L28 10V22L16 28L4 22V10L16 4Z" fill="#a3e635" opacity="0.15" stroke="#a3e635" stroke-width="1.5"/>
+          <path d="M11 16l3 3 7-7" stroke="#a3e635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="text-white font-black text-xl tracking-tight">VOLTIS</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-sm text-white/60">
+        <a href="#vehicles" class="hover:text-white transition-colors">Vehicles</a>
+        <a href="#features" class="hover:text-white transition-colors">Technology</a>
+        <a href="#stats" class="hover:text-white transition-colors">Performance</a>
+        <a href="#cta" class="hover:text-white transition-colors">Order</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="text-sm text-white/60 hover:text-white transition-colors hidden md:block">Owners</a>
+        <a href="#cta" class="px-5 py-2.5 bg-volt-500 hover:bg-volt-400 text-charcoal-950 font-bold text-sm rounded-full transition-all hover:scale-105">
+          Reserve now
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-end overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=800&fit=crop&auto=format&q=80"
+        alt="Electric vehicle on open road"
+        class="w-full h-full object-cover hero-img"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/60 to-charcoal-950/20"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-charcoal-950/80 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 pb-24 pt-32 w-full">
+      <div class="max-w-2xl">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-volt-500/40 bg-volt-500/10 text-volt-400 text-sm font-medium mb-8">
+          <span class="w-2 h-2 rounded-full bg-volt-400 animate-pulse"></span>
+          Pre-orders open — deliveries start Q3 2026
+        </div>
+        <h1 class="text-6xl md:text-8xl font-black text-white leading-none tracking-tighter mb-6">
+          The EV<br/>built for<br/><span class="volt-text">people.</span>
+        </h1>
+        <p class="text-xl text-white/70 leading-relaxed mb-10 max-w-xl">
+          Voltis Apex. 0–60 in 2.8 seconds. 480-mile real-world range. Priced from $39,900 — because clean transport shouldn't be a luxury.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#cta" class="px-8 py-4 bg-volt-500 hover:bg-volt-400 text-charcoal-950 font-black rounded-full transition-all hover:scale-105 text-center volt-glow">
+            Reserve Apex for $250
+          </a>
+          <a href="#vehicles" class="px-8 py-4 border border-white/20 hover:border-white/40 text-white font-semibold rounded-full transition-all text-center">
+            Explore the lineup →
+          </a>
+        </div>
+        <!-- Quick specs -->
+        <div class="flex gap-8 mt-14">
+          <div class="stat-border pl-4">
+            <p class="text-3xl font-black text-white">2.8s</p>
+            <p class="text-white/50 text-sm">0–60 mph</p>
+          </div>
+          <div class="stat-border pl-4">
+            <p class="text-3xl font-black text-white">480mi</p>
+            <p class="text-white/50 text-sm">Real range</p>
+          </div>
+          <div class="stat-border pl-4">
+            <p class="text-3xl font-black text-white">18min</p>
+            <p class="text-white/50 text-sm">10–80% charge</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VEHICLES -->
+  <section id="vehicles" class="py-32 bg-charcoal-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-20">
+        <p class="volt-text font-semibold text-sm uppercase tracking-widest mb-4">The Lineup</p>
+        <h2 class="text-4xl md:text-5xl font-black text-white mb-6">Every drive. One perfect Voltis.</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Apex -->
+        <div class="group rounded-2xl overflow-hidden border border-white/10 hover:border-volt-500/40 transition-all bg-charcoal-800/50">
+          <div class="relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=1200&h=800&fit=crop&auto=format&q=80" alt="Voltis Apex" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-800/80 to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 bg-volt-500 text-charcoal-950 text-xs font-bold rounded-full">NEW 2026</span>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-black text-white mb-1">Apex</h3>
+            <p class="text-white/50 text-sm mb-6">Performance Sedan</p>
+            <div class="grid grid-cols-3 gap-4 mb-8 text-center">
+              <div>
+                <p class="text-lg font-bold text-white">2.8s</p>
+                <p class="text-white/40 text-xs">0–60</p>
+              </div>
+              <div>
+                <p class="text-lg font-bold text-white">480mi</p>
+                <p class="text-white/40 text-xs">Range</p>
+              </div>
+              <div>
+                <p class="text-lg font-bold text-white">670hp</p>
+                <p class="text-white/40 text-xs">Power</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <p class="text-white font-bold text-xl">From $39,900</p>
+              <a href="#cta" class="px-4 py-2 bg-volt-500 hover:bg-volt-400 text-charcoal-950 text-sm font-bold rounded-full transition-colors">Reserve</a>
+            </div>
+          </div>
+        </div>
+        <!-- Terrain -->
+        <div class="group rounded-2xl overflow-hidden border border-white/10 hover:border-volt-500/40 transition-all bg-charcoal-800/50">
+          <div class="relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&h=800&fit=crop&auto=format&q=80" alt="Voltis Terrain" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-800/80 to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 bg-white/10 backdrop-blur-sm text-white text-xs font-bold rounded-full border border-white/20">COMING 2027</span>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-black text-white mb-1">Terrain</h3>
+            <p class="text-white/50 text-sm mb-6">Adventure SUV</p>
+            <div class="grid grid-cols-3 gap-4 mb-8 text-center">
+              <div>
+                <p class="text-lg font-bold text-white">3.4s</p>
+                <p class="text-white/40 text-xs">0–60</p>
+              </div>
+              <div>
+                <p class="text-lg font-bold text-white">420mi</p>
+                <p class="text-white/40 text-xs">Range</p>
+              </div>
+              <div>
+                <p class="text-lg font-bold text-white">550hp</p>
+                <p class="text-white/40 text-xs">Power</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <p class="text-white font-bold text-xl">From $49,900</p>
+              <a href="#cta" class="px-4 py-2 border border-volt-500/50 text-volt-400 text-sm font-bold rounded-full transition-colors hover:bg-volt-500/10">Notify me</a>
+            </div>
+          </div>
+        </div>
+        <!-- Civic -->
+        <div class="group rounded-2xl overflow-hidden border border-white/10 hover:border-volt-500/40 transition-all bg-charcoal-800/50">
+          <div class="relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=800&fit=crop&auto=format&q=80" alt="Voltis Civic" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-800/80 to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 bg-white/10 backdrop-blur-sm text-white text-xs font-bold rounded-full border border-white/20">COMING 2027</span>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-black text-white mb-1">City</h3>
+            <p class="text-white/50 text-sm mb-6">Urban Compact</p>
+            <div class="grid grid-cols-3 gap-4 mb-8 text-center">
+              <div>
+                <p class="text-lg font-bold text-white">4.9s</p>
+                <p class="text-white/40 text-xs">0–60</p>
+              </div>
+              <div>
+                <p class="text-lg font-bold text-white">310mi</p>
+                <p class="text-white/40 text-xs">Range</p>
+              </div>
+              <div>
+                <p class="text-lg font-bold text-white">280hp</p>
+                <p class="text-white/40 text-xs">Power</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <p class="text-white font-bold text-xl">From $28,900</p>
+              <a href="#cta" class="px-4 py-2 border border-volt-500/50 text-volt-400 text-sm font-bold rounded-full transition-colors hover:bg-volt-500/10">Notify me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES / TECH -->
+  <section id="features" class="py-32 section-light">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center mb-24">
+        <div>
+          <p class="text-volt-600 font-semibold text-sm uppercase tracking-widest mb-4">Voltis Technology</p>
+          <h2 class="text-4xl md:text-5xl font-black text-charcoal-900 mb-6">Not just an EV.<br/>A rolling software platform.</h2>
+          <p class="text-lg text-charcoal-800/60 leading-relaxed mb-8">Voltis vehicles run on our proprietary VoltOS — a full-stack vehicle operating system that makes your car smarter, safer, and more capable over time through over-the-air updates.</p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-volt-500/10 border border-volt-500/20 flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-volt-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-charcoal-900 mb-1">HyperCharge™ Architecture</h4>
+                <p class="text-charcoal-800/60 text-sm">800V silicon-carbide drivetrain enables 350kW peak charging — add 200 miles in under 12 minutes at Voltis SuperCharge stations.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-volt-500/10 border border-volt-500/20 flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-volt-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-charcoal-900 mb-1">Aurora Assist — Level 3 Autonomy</h4>
+                <p class="text-charcoal-800/60 text-sm">Highway hands-free driving with LiDAR + camera fusion. OTA updates progressively unlock new capabilities as our neural network improves.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-volt-500/10 border border-volt-500/20 flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-volt-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-charcoal-900 mb-1">Vehicle-to-Grid (V2G) Ready</h4>
+                <p class="text-charcoal-800/60 text-sm">Your Voltis is a 100kWh battery on wheels. Power your home during peak rates, sell surplus back to the grid, and earn up to $180/month.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-3xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1562408590-e32931084e23?w=1200&h=800&fit=crop&auto=format&q=80" alt="Voltis technology interior" class="w-full h-full object-cover" style="min-height:420px;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats" class="py-32 bg-charcoal-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-20">
+        <p class="volt-text font-semibold text-sm uppercase tracking-widest mb-4">By the numbers</p>
+        <h2 class="text-4xl md:text-5xl font-black text-white mb-6">Performance you can measure.</h2>
+        <p class="text-xl text-white/50 max-w-2xl mx-auto">Tested in Death Valley summer heat, Arctic winter cold, and everything in between. The numbers don't lie.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div class="p-8 rounded-2xl border border-white/10 bg-charcoal-800/40 text-center group hover:border-volt-500/40 transition-all">
+          <p class="text-5xl font-black volt-text mb-3 group-hover:scale-110 transition-transform">480mi</p>
+          <p class="text-white/60 font-medium">Real-world range at 70mph</p>
+        </div>
+        <div class="p-8 rounded-2xl border border-white/10 bg-charcoal-800/40 text-center group hover:border-volt-500/40 transition-all">
+          <p class="text-5xl font-black volt-text mb-3 group-hover:scale-110 transition-transform">2.8s</p>
+          <p class="text-white/60 font-medium">0–60 mph (dual-motor AWD)</p>
+        </div>
+        <div class="p-8 rounded-2xl border border-white/10 bg-charcoal-800/40 text-center group hover:border-volt-500/40 transition-all">
+          <p class="text-5xl font-black volt-text mb-3 group-hover:scale-110 transition-transform">18min</p>
+          <p class="text-white/60 font-medium">10–80% at 350kW station</p>
+        </div>
+        <div class="p-8 rounded-2xl border border-white/10 bg-charcoal-800/40 text-center group hover:border-volt-500/40 transition-all">
+          <p class="text-5xl font-black volt-text mb-3 group-hover:scale-110 transition-transform">5★</p>
+          <p class="text-white/60 font-medium">NHTSA safety rating</p>
+        </div>
+      </div>
+      <!-- Owner quote -->
+      <div class="max-w-3xl mx-auto p-10 rounded-2xl border border-white/10 bg-charcoal-800/40">
+        <div class="flex gap-1 mb-6">
+          {[...Array(5)].map((_,i) => (
+            <svg class="w-5 h-5 text-volt-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          ))}
+          ★★★★★
+        </div>
+        <p class="text-xl text-white/80 italic leading-relaxed mb-6">"I drove 3,200 miles across the country in my Voltis Apex and charged exactly when I wanted to. The HyperCharge network is everywhere, the range is honest, and the car gets better every month. I'll never go back to combustion."</p>
+        <p class="text-white font-semibold">Marcus Chen</p>
+        <p class="text-white/40 text-sm">Apex owner, delivered October 2025</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / ORDER -->
+  <section id="cta" class="py-32 bg-volt-500 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 20% 50%, #fff 0%, transparent 50%), radial-gradient(circle at 80% 20%, #fff 0%, transparent 40%)"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+      <h2 class="text-5xl md:text-7xl font-black text-charcoal-950 mb-6 leading-tight">Reserve your<br/>Voltis today.</h2>
+      <p class="text-2xl text-charcoal-900/60 mb-12 max-w-2xl mx-auto">$250 fully refundable reservation. Configure when production begins. Deliveries start Q3 2026.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#" class="px-10 py-5 bg-charcoal-950 hover:bg-charcoal-800 text-white font-black text-lg rounded-full transition-all hover:scale-105">
+          Reserve Apex — $39,900
+        </a>
+        <a href="#" class="px-10 py-5 border-2 border-charcoal-950/20 hover:border-charcoal-950/40 text-charcoal-950 font-bold text-lg rounded-full transition-all">
+          Compare all models
+        </a>
+      </div>
+      <p class="mt-8 text-charcoal-900/50 text-sm">Fully refundable · No commitment · Cancel anytime</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-charcoal-950 border-t border-white/5 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-5 gap-12 mb-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <svg class="w-8 h-8" viewBox="0 0 32 32" fill="none">
+              <path d="M16 4L28 10V22L16 28L4 22V10L16 4Z" fill="#a3e635" opacity="0.15" stroke="#a3e635" stroke-width="1.5"/>
+              <path d="M11 16l3 3 7-7" stroke="#a3e635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="text-white font-black text-xl">VOLTIS</span>
+          </div>
+          <p class="text-white/40 text-sm leading-relaxed mb-6">Electric vehicles built for real people, at prices real people can afford. Zero emissions. Zero compromise.</p>
+          <div class="flex gap-4">
+            <a href="#" class="w-10 h-10 rounded-full border border-white/10 hover:border-volt-500/50 flex items-center justify-center transition-colors">
+              <svg class="w-4 h-4 text-white/50" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full border border-white/10 hover:border-volt-500/50 flex items-center justify-center transition-colors">
+              <svg class="w-4 h-4 text-white/50" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4">Vehicles</p>
+          <ul class="space-y-3 text-white/40 text-sm">
+            <li><a href="#" class="hover:text-volt-400 transition-colors">Apex Sedan</a></li>
+            <li><a href="#" class="hover:text-volt-400 transition-colors">Terrain SUV</a></li>
+            <li><a href="#" class="hover:text-volt-400 transition-colors">City Compact</a></li>
+            <li><a href="#" class="hover:text-volt-400 transition-colors">Compare models</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4">Technology</p>
+          <ul class="space-y-3 text-white/40 text-sm">
+            <li><a href="#" class="hover:text-volt-400 transition-colors">HyperCharge™</a></li>
+            <li><a href="#" class="hover:text-volt-400 transition-colors">Aurora Assist</a></li>
+            <li><a href="#" class="hover:text-volt-400 transition-colors">VoltOS Platform</a></li>
+            <li><a href="#" class="hover:text-volt-400 transition-colors">V2G Energy</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4">Company</p>
+          <ul class="space-y-3 text-white/40 text-sm">
+            <li><a href="#" class="hover:text-volt-400 transition-colors">About Voltis</a></li>
+            <li><a href="#" class="hover:text-volt-400 transition-colors">Careers</a></li>
+            <li><a href="#" class="hover:text-volt-400 transition-colors">Sustainability</a></li>
+            <li><a href="#" class="hover:text-volt-400 transition-colors">Press</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-white/30 text-sm">© 2026 Voltis Motors, Inc. All rights reserved.</p>
+        <div class="flex gap-6 text-white/30 text-sm">
+          <a href="#" class="hover:text-white transition-colors">Privacy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms</a>
+          <a href="#" class="hover:text-white transition-colors">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
